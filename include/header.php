@@ -11,7 +11,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#industries">Industries</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <li><a href="#contact" class="cta-nav">Get Started</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
