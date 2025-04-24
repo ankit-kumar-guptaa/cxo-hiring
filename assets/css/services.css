@@ -1,0 +1,493 @@
+/* ========== SERVICE PAGE SPECIFIC STYLES ========== */
+/* Designed to complement existing style.css without conflicts */
+
+/* Base Variables - Extending your existing palette */
+:root {
+    --exec-primary: #1e40af; /* Darker blue for professionalism */
+    --exec-accent: #d97706; /* Amber accent */
+    --exec-light: #f3f4f6;
+    --exec-dark: #111827;
+    --exec-gray: #4b5563;
+    --exec-success: #059669;
+}
+
+/* Service Hero (if needed later) */
+.service-hero {
+    background: linear-gradient(135deg, var(--exec-primary) 0%, var(--exec-dark) 100%);
+    padding: 6rem 0 4rem;
+    color: white;
+    text-align: center;
+}
+
+/* Service Overview Section */
+.service-overview {
+    padding: 5rem 0;
+    background-color: var(--exec-light);
+}
+
+.service-overview .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.service-overview h1 {
+    color: var(--exec-primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+}
+
+.service-overview .subtitle {
+    color: var(--exec-accent);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.service-overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    background: var(--exec-primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.feature-text h3 {
+    color: var(--exec-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    color: var(--exec-gray);
+    margin-bottom: 0;
+}
+
+.content-image img {
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+    height: 400px;
+    object-fit: cover;
+}
+
+.content-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Roles Section - Tab System */
+.roles-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.roles-tabs {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.tab-buttons {
+    display: flex;
+    background: var(--exec-light);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-btn {
+    padding: 1.2rem 2rem;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--exec-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    color: var(--exec-primary);
+    background: rgba(30,64,175,0.05);
+}
+
+.tab-btn.active {
+    color: var(--exec-primary);
+    border-bottom-color: var(--exec-primary);
+    background: white;
+}
+
+.tab-content {
+    padding: 2.5rem;
+    display: none;
+    background: white;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.role-details h3 {
+    color: var(--exec-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.role-details ul {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.role-details li {
+    padding: 0.7rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.role-details li:before {
+    content: "•";
+    color: var(--exec-accent);
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+}
+
+.case-example {
+    background: var(--exec-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border-left: 4px solid var(--exec-accent);
+}
+
+.case-example h4 {
+    color: var(--exec-primary);
+    margin-bottom: 0.8rem;
+}
+
+/* Differentiators Section */
+.difference-section {
+    padding: 5rem 0;
+    background: var(--exec-light);
+}
+
+.difference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.difference-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.difference-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    padding: 1.5rem;
+    background: var(--exec-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+}
+
+.card-header h3 {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body ul {
+    list-style: none;
+}
+
+.card-body li {
+    padding: 0.6rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+}
+
+.card-body li:before {
+    content: "▹";
+    color: var(--exec-accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Industry Accordion Section */
+.industry-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.industry-accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-btn {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--exec-light);
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--exec-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background: #e5e7eb;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.accordion-btn.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.accordion-content.active {
+    max-height: 1000px;
+    padding: 2rem;
+}
+
+.industry-content .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.industry-content h3 {
+    color: var(--exec-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.industry-content ul {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.industry-content li {
+    padding: 0.7rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.industry-content li:before {
+    content: "•";
+    color: var(--exec-accent);
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+}
+
+.industry-image img {
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 5rem 0;
+    background: var(--exec-light);
+    position: relative;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80') center/cover;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.testimonial-slider {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin: 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--exec-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+blockquote:before {
+    content: "";
+    font-size: 4rem;
+    color: var(--exec-primary);
+    opacity: 0.2;
+    position: absolute;
+    left: -1rem;
+    top: -1.5rem;
+    font-family: serif;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.client-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--exec-light);
+}
+
+.client-details h4 {
+    color: var(--exec-dark);
+    margin-bottom: 0.3rem;
+}
+
+.client-details p {
+    color: var(--exec-accent);
+    font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .service-overview .content-grid,
+    .industry-content .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-image img {
+        height: 250px;
+        margin-top: 2rem;
+    }
+    
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-overview h1 {
+        font-size: 2.2rem;
+    }
+    
+    .difference-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-overview,
+    .roles-section,
+    .difference-section,
+    .industry-section,
+    .testimonials-section {
+        padding: 3rem 0;
+    }
+    
+    .tab-btn {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .tab-content {
+        padding: 1.5rem;
+    }
+    
+    .client-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
