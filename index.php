@@ -24,7 +24,7 @@
             <div class="hero-buttons">
                 <!-- <a href="#!" class="cta-button" id="openCxoModal">Hire a CXO <i class="fas fa-arrow-right"></i></a> -->
                 <a href="#!" class="cta-button open-cxo-modal">Hire a CXO <i class="fas fa-arrow-right"></i></a>
-                <button class="btn btn-primary open-cxo-modal">Hire a CXO</button>
+                <!-- <button class="btn btn-primary open-cxo-modal">Hire a CXO</button> -->
                 <a href="#services" class="cta-button secondary">Our Services <i class="fas fa-search"></i></a>
             </div>
         </div>
