@@ -708,7 +708,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:info@cxohiring.com">info@cxohiring.com</a></p>
+                                <p><a href="mailto:info@cxohire.com">info@cxohiring.com</a></p>
                                 <div class="email-link">
                                     <a href="mailto:info@cxohiring.com">Send Email <i
                                             class="fas fa-paper-plane"></i></a>
@@ -994,8 +994,7 @@
 
 
     <!-- Popup Form HTML -->
-  <!-- Modal -->
-  <div class="modal fade" id="cxoRecruitModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="cxoRecruitModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
@@ -1012,11 +1011,11 @@
       <div class="px-4 pt-3">
         <div class="progress-tracker">
           <div class="progress-step active" data-step="1">
-            <div class="step-number">1</div>
+            <div class="step-numberr">1</div>
             <div class="step-label">BASIC INFO</div>
           </div>
           <div class="progress-step" data-step="2">
-            <div class="step-number">2</div>
+            <div class="step-numberr">2</div>
             <div class="step-label">REQUIREMENTS</div>
           </div>
         </div>
@@ -1081,6 +1080,17 @@
             <label class="form-label fw-bold">What challenges are you facing?*</label>
             <textarea name="challenges" class="form-control" rows="3" placeholder="Describe your challenges..." required></textarea>
           </div>
+
+          <div class="mb-3">
+            <div class="custom-captcha">
+              <canvas id="captchaCanvas" width="150" height="50"></canvas>
+              <button type="button" class="btn btn-sm btn-outline-secondary ms-2" onclick="generateCaptcha()">Refresh</button>
+              <input type="text" id="captchaInput" class="form-control mt-2" placeholder="Enter CAPTCHA*" required>
+              <div class="captcha-error d-none" id="captcha-error">
+                <i class="fas fa-exclamation-circle me-1"></i> Incorrect CAPTCHA. Please try again.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="modal-footer">
@@ -1090,11 +1100,21 @@
           <button type="button" class="btn btn-primary next-step">
             Continue <i class="fas fa-chevron-right ms-2"></i>
           </button>
-          <button type="submit" class="btn btn-success submit-form d-none">
+          <button type="submit" class="btn btn-success submit-form d-none" id="submitBtn">
             Submit <i class="fas fa-paper-plane ms-2"></i>
           </button>
         </div>
       </form>
+      
+      <!-- Loader -->
+      <div class="loader-overlay d-none" id="loader">
+        <div class="spinner">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2 text-white">Processing your request...</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -1112,75 +1132,186 @@
     </div>
   </div>
 </div>
+
 <style>
-        .progress-tracker {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .progress-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100px;
-        }
-        .step-number {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #e9ecef;
-            color: #6c757d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .step-label {
-            font-size: 12px;
-            font-weight: 500;
-            color: #6c757d;
-            text-align: center;
-        }
-        .progress-step.active .step-number {
-            background: #0d6efd;
-            color: white;
-        }
-        .progress-step.active .step-label {
-            color: #0d6efd;
-            font-weight: 600;
-        }
-        .position-btn {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 5px;
-        }
-        .position-btn i {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-        .form-step {
-            display: none;
-        }
-        .form-step.active {
-            display: block;
-            animation: fadeIn 0.3s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+.progress-tracker {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+.step-numberr {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.step-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6c757d;
+    text-align: center;
+}
+.progress-step.active .step-numberr {
+    background: #0d6efd;
+    color: white;
+}
+.progress-step.active .step-label {
+    color: #0d6efd;
+    font-weight: 600;
+}
+.position-btn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+}
+.position-btn i {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.form-step {
+    display: none;
+}
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.custom-captcha {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#captchaCanvas {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+#captchaInput {
+    max-width: 150px;
+}
+.captcha-error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 4px;
+}
+.captcha-error.shake {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+@keyframes shake {
+    10%, 90% { transform: translateX(-1px); }
+    20%, 80% { transform: translateX(2px); }
+    30%, 50%, 70% { transform: translateX(-4px); }
+    40%, 60% { transform: translateX(4px); }
+}
+/* Loader Styles */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.spinner {
+    text-align: center;
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+</style>
 
 <script>
+let captchaText = '';
+
+function generateCaptcha() {
+    const canvas = document.getElementById('captchaCanvas');
+    const ctx = canvas.getContext('2d');
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    captchaText = '';
+
+    // Generate random 6-character string
+    for (let i = 0; i < 6; i++) {
+        captchaText += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Background
+    ctx.fillStyle = '#f8f9fa';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Text
+    ctx.font = '24px Arial';
+    ctx.fillStyle = '#343a40';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    // Add distortion
+    for (let i = 0; i < captchaText.length; i++) {
+        ctx.save();
+        ctx.translate(20 + i * 20, 25);
+        ctx.rotate((Math.random() - 0.5) * 0.3);
+        ctx.fillText(captchaText[i], 0, 0);
+        ctx.restore();
+    }
+
+    // Minimal noise for performance
+    for (let i = 0; i < 20; i++) {
+        ctx.beginPath();
+        ctx.arc(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height,
+            Math.random(),
+            0,
+            2 * Math.PI
+        );
+        ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.2})`;
+        ctx.fill();
+    }
+
+    // Clear input and reset error
+    document.getElementById('captchaInput').value = '';
+    document.getElementById('captcha-error').classList.add('d-none');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const cxoModal = new bootstrap.Modal(document.getElementById('cxoRecruitModal'));
     const successModal = new bootstrap.Modal(document.getElementById('successModal'));
     const form = document.getElementById('cxoRecruitForm');
+    const loader = document.getElementById('loader');
     
+    // Generate CAPTCHA on load
+    generateCaptcha();
+
     // Open modal
     document.querySelectorAll('.open-cxo-modal').forEach(btn => {
         btn.addEventListener('click', function() {
@@ -1211,30 +1342,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Form submission
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Submit form via AJAX
-        const formData = new FormData(form);
+        // Validate CAPTCHA
+        const captchaInput = document.getElementById('captchaInput').value;
+        const captchaError = document.getElementById('captcha-error');
+        if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
+            captchaError.classList.remove('d-none');
+            captchaError.classList.add('shake');
+            setTimeout(() => captchaError.classList.remove('shake'), 500);
+            return;
+        }
         
-        fetch(form.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.success) {
+        // Show loader
+        loader.classList.remove('d-none');
+        
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            const data = await response.json();
+            loader.classList.add('d-none');
+            
+            if (data.success) {
                 cxoModal.hide();
                 successModal.show();
                 form.reset();
+                generateCaptcha();
             } else {
                 alert('Error: ' + (data.message || 'Please try again.'));
             }
-        })
-        .catch(error => {
+        } catch (error) {
+            loader.classList.add('d-none');
             console.error('Error:', error);
             alert('There was an error. Please try again.');
-        });
+        }
     });
 
     // Helper functions
@@ -1248,124 +1397,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.classList.remove('is-invalid');
             }
         });
+
+        // Validate CAPTCHA only on second step
+        if (step.dataset.step === '2') {
+            const captchaInput = document.getElementById('captchaInput').value;
+            const captchaError = document.getElementById('captcha-error');
+            if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
+                captchaError.classList.remove('d-none');
+                captchaError.classList.add('shake');
+                setTimeout(() => captchaError.classList.remove('shake'), 500);
+                isValid = false;
+            } else {
+                captchaError.classList.add('d-none');
+            }
+        }
+
         return isValid;
     }
 
     function updateProgress(step) {
         document.querySelectorAll('.progress-step').forEach(stepEl => {
-            if (parseInt(stepEl.dataset.step) <= step) {
-                stepEl.classList.add('active');
-            } else {
-                stepEl.classList.remove('active');
-            }
+            stepEl.classList.toggle('active', parseInt(stepEl.dataset.step) <= step);
         });
         
-        if (step === 1) {
-            document.querySelector('.prev-step').classList.add('d-none');
-            document.querySelector('.next-step').classList.remove('d-none');
-            document.querySelector('.submit-form').classList.add('d-none');
-        } else if (step === 2) {
-            document.querySelector('.prev-step').classList.remove('d-none');
-            document.querySelector('.next-step').classList.add('d-none');
-            document.querySelector('.submit-form').classList.remove('d-none');
-        }
+        document.querySelector('.prev-step').classList.toggle('d-none', step === 1);
+        document.querySelector('.next-step').classList.toggle('d-none', step === 2);
+        document.querySelector('.submit-form').classList.toggle('d-none', step !== 2);
     }
 
     function resetForm() {
         form.reset();
         document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
-        document.querySelector('.form-step').classList.add('active');
+        document.querySelector('.form-step[data-step="1"]').classList.add('active');
         updateProgress(1);
         document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+        document.getElementById('captcha-error').classList.add('d-none');
+        generateCaptcha();
     }
     
     // Initialize
     updateProgress(1);
 });
 </script>
-<style>
-        .cxo-progress-tracker {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin: 20px 0;
-        }
-        .progress-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-        .step-number {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: #e0e0e0;
-            color: #888;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-        }
-        .step-label {
-            font-size: 12px;
-            color: #888;
-            margin-top: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-        .progress-connector {
-            flex: 1;
-            max-width: 60px;
-            height: 3px;
-            background: #e0e0e0;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .progress-connector::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 0;
-            height: 100%;
-            background: #4f46e5;
-            transition: width 0.4s ease;
-        }
-        .progress-step.active .step-number {
-            background: #4f46e5;
-            color: white;
-            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
-        }
-        .progress-step.active .step-label {
-            color: #4f46e5;
-            font-weight: 500;
-        }
-        .progress-connector.active::after {
-            width: 100%;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .position-btn {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 5px;
-        }
-        .position-btn i {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-    </style>
     <?php include "include/footer.php" ?>
