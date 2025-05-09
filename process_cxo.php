@@ -37,6 +37,39 @@ $data = [
 ];
 
 try {
+    // Database connection
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "cxo_hiring";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+        throw new Exception("Database connection failed: " . $conn->connect_error);
+    }
+    
+    // Insert data into database
+    $sql = "INSERT INTO cxo_applications (full_name, email, phone, company, position, challenges, submitted_at) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssss", 
+        $data['full_name'], 
+        $data['email'], 
+        $data['phone'], 
+        $data['company'], 
+        $data['position'], 
+        $data['challenges'], 
+        $data['submitted_at']
+    );
+    
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+    
     // Send email to admin
     $mail = new PHPMailer(true);
     
@@ -101,5 +134,6 @@ try {
     echo json_encode(['success' => true]);
     
 } catch (Exception $e) {
-    echo json_encode(['success' => false, 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+    echo json_encode(['success' => false, 'message' => "Error: " . $e->getMessage()]);
+    exit;
 }
