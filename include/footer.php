@@ -3,7 +3,7 @@
 <footer>
     <div class="footer-container">
         <div class="footer-about">
-            <div class="footer-logo">CXO Hiring</div>
+            <div class="footer-logo">CXO Hire</div>
             <p>Premier executive search firm specializing in C-suite and board-level placements across industries worldwide.</p>
             <div class="footer-social">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -15,23 +15,23 @@
         <div class="footer-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#process">Our Process</a></li>
-                <li><a href="#industries">Industries</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="process.php">Our Process</a></li>
+                <!-- <li><a href="#industries">Industries</a></li> -->
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>
         <div class="footer-links">
             <h3>Services</h3>
             <ul>
-                <li><a href="#">Executive Search</a></li>
-                <li><a href="#">Confidential Search</a></li>
-                <li><a href="#">Board Services</a></li>
-                <li><a href="#">Leadership Transition</a></li>
-                <li><a href="#">Diversity Hiring</a></li>
-                <li><a href="#">Interim Solutions</a></li>
+                <li><a href="full-scale-search.php">Full-Scale Executive Search</a></li>
+                <li><a href="confidential-executive-search.php">Confidential Search</a></li>
+                <li><a href="board-advisory-service.php">Board Services</a></li>
+                <li><a href="leader-transition-service.php">Leadership Transition</a></li>
+                <li><a href="diversity-search.php">Diversity Hiring</a></li>
+                <li><a href="interim-solutions.php">Interim Solutions</a></li>
             </ul>
         </div>
         <div class="footer-newsletter">
