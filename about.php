@@ -26,12 +26,12 @@
         }
         
         .about-hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            padding: 8rem 0 6rem;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            background: linear-gradient(135deg, #213756 0%, #0a2e64 100%);
+    padding: 8rem 0 6rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
         
         .about-hero::before {
@@ -341,7 +341,7 @@
             background: var(--white);
         }
         
-        .contact-info {
+        /* .contact-info {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
             color: var(--white);
             height: 100%;
@@ -354,7 +354,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 20px;
-        }
+        } */
         
         .contact-icon {
             width: 50px;

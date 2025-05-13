@@ -45,7 +45,7 @@
                                 <h4>Email</h4>
                                 <p><a href="mailto:info@cxohire.com">info@cxohire.com</a></p>
                                 <div class="email-link">
-                                    <a href="mailto:info@cxohiring.com">Send Email <i
+                                    <a href="mailto:info@cxohire.com">Send Email <i
                                             class="fas fa-paper-plane"></i></a>
                                 </div>
                             </div>

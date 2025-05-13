@@ -160,7 +160,7 @@
                     <h3>Board Advisory Services</h3>
                     <p>Specialized recruitment for board directors, advisory board members, and governance
                         professionals.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="board-advisory.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
@@ -172,7 +172,7 @@
                     <h3>Diversity Executive Search</h3>
                     <p>Focused on identifying and placing diverse leadership talent to strengthen organizational
                         performance.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="diversity-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
@@ -183,7 +183,7 @@
                 <div class="service-content">
                     <h3>Interim Executive Solutions</h3>
                     <p>Providing experienced interim leaders to bridge gaps during transitions or special projects.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="interim-solutions.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -1230,7 +1230,7 @@
 .loader-overlay {
     position: fixed;
     top: 0;
-    left0;
+    left:0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);

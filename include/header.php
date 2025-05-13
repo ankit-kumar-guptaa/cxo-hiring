@@ -27,8 +27,8 @@
 
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle px-3" href="services.php" id="servicesDropdown" role="button">
-                            <i class="fas fa-briefcase me-1"></i> Services
+                        <a class="nav-link dropdown-toggle px-3" href="#" id="servicesDropdown" role="button">
+                            <i class="fas fa-briefcase me-1"></i> Services <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="servicesDropdown">
                             <li>
@@ -41,7 +41,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="full-scale-search.php"><i class="fas fa-search me-2 text-muted"></i> Full-Scale Search</a></li>
-                            <li><a class="dropdown-item" href="confidential-search.php"><i class="fas fa-lock me-2 text-muted"></i> Confidential Search</a></li>
+                            <li><a class="dropdown-item" href="confidential-executive-search.php"><i class="fas fa-lock me-2 text-muted"></i> Confidential Search</a></li>
                             <li><a class="dropdown-item" href="transition-services.php"><i class="fas fa-exchange-alt me-2 text-muted"></i> Transition Services</a></li>
                             <li><a class="dropdown-item" href="board-advisory.php"><i class="fas fa-chalkboard-teacher me-2 text-muted"></i> Board Advisory</a></li>
                             <li><a class="dropdown-item" href="diversity-search.php"><i class="fas fa-users me-2 text-muted"></i> Diversity Search</a></li>
@@ -55,8 +55,8 @@
 
                     <!-- Industries Dropdown -->
                     <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle px-3" href="industries.php" id="industriesDropdown" role="button">
-                            <i class="fas fa-industry me-1"></i> Industries
+                        <a class="nav-link dropdown-toggle px-3" href="#" id="industriesDropdown" role="button">
+                            <i class="fas fa-industry me-1"></i> Industries <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <div class="dropdown-menu mega-menu dropdown-menu-end shadow-sm border-0 w-100 p-3" aria-labelledby="industriesDropdown">
                             <div class="container">
@@ -106,7 +106,7 @@
                     </li>
 
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <a href="get-started.php" class="btn btn-primary rounded-pill px-4 py-2 d-flex align-items-center">
+                        <a href="contact.php" class="btn btn-primary rounded-pill px-4 py-2 d-flex align-items-center">
                             <i class="fas fa-rocket me-2"></i> Get Started
                         </a>
                     </li>
