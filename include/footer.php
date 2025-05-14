@@ -1,6 +1,11 @@
 
 <!-- Footer Section -->
 <footer>
+
+ <!-- WhatsApp Floating Button -->
+ <a href="https://wa.me/919211460101?text=Hi" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <div class="footer-container">
         <div class="footer-about">
             <div class="footer-logo">CXO Hire</div>
@@ -51,6 +56,54 @@
 
 <!-- JavaScript Bundle (includes Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<style>
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    
+    .whatsapp-btn:hover {
+        background-color: #128C7E;
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .whatsapp-btn i {
+        margin-top: 2px;
+    }
+    
+    /* Add animation */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+    }
+    
+    .whatsapp-btn {
+        animation: pulse 2s infinite;
+    }
+</style>
 <script>
 
     // Mobile Menu Toggle
