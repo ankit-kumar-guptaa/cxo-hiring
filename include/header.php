@@ -8,7 +8,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="https://elitecorporatesolutions.com/images/logo/logo.png" alt="Elite Corporate Solutions" height="40">
+                <img src="logo.jpg" alt="Elite Corporate Solutions" height="80">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,6 +41,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="full-scale-search.php"><i class="fas fa-search me-2 text-muted"></i> Full-Scale Search</a></li>
+                            <li><a class="dropdown-item" href="virtual-cxo-services.php"><i class="fas fa-users me-2 text-muted"></i> Virtual CXO </a></li>
                             <li><a class="dropdown-item" href="confidential-executive-search.php"><i class="fas fa-lock me-2 text-muted"></i> Confidential Search</a></li>
                             <li><a class="dropdown-item" href="transition-services.php"><i class="fas fa-exchange-alt me-2 text-muted"></i> Transition Services</a></li>
                             <li><a class="dropdown-item" href="board-advisory.php"><i class="fas fa-chalkboard-teacher me-2 text-muted"></i> Board Advisory</a></li>
