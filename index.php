@@ -181,9 +181,9 @@
                         alt="Interim Executive">
                 </div>
                 <div class="service-content">
-                    <h3>Interim Executive Solutions</h3>
-                    <p>Providing experienced interim leaders to bridge gaps during transitions or special projects.</p>
-                    <a href="interim-solutions.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Virtual CXO Solutions</h3>
+                    <p>In an era of rapid change and increasing complexity, organizations need experienced leadership to stay competitive—but without the fixed cost of full-time executives.</p>
+                    <a href="virtual-cxo-services.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -632,8 +632,6 @@
             max-width: 100%;
             max-height: 90px;
             object-fit: contain;
-            filter: grayscale(100%);
-            opacity: 0.8;
             transition: all 0.3s ease;
         }
 
@@ -747,7 +745,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="position">Position Seeking</label>
+                        <label for="position">Looking to hire </label>
                         <select id="position" class="form-control">
                             <option value="">Select position type</option>
                             <option value="ceo">CEO/MD</option>
@@ -1003,7 +1001,7 @@
             <i class="fas fa-user-tie text-white"></i>
           </div>
           <h4 class="modal-title mt-2">Find Your Perfect <span class="text-warning">CXO Match</span></h4>
-          <p class="small mb-0">Complete this form and we'll connect you with 3 qualified candidates within <strong>72 hours</strong></p>
+          <p class="small mb-0">we’ll connect with you in <strong>24 hours</strong> and fix online meeting with Senior leadership for better understanding of requirement </p>
         </div>
       </div>
       
@@ -1070,7 +1068,7 @@
                 <input type="radio" class="btn-check" name="position" id="position_cmo" value="CMO">
                 <label class="btn btn-outline-primary position-btn w-100" for="position_cmo">
                   <i class="fas fa-bullhorn"></i>
-                  <span>CMO</span>
+                  <span>OTHER</span>
                 </label>
               </div>
             </div>

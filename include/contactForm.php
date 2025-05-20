@@ -30,9 +30,9 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Direct Line</h4>
-                                <p><a href="tel:+919871916980">+91 98719 16980</a></p>
+                                <p><a href="tel:+919211610707">+919211610707</a></p>
                                 <div class="whatsapp-link">
-                                    <a href="https://wa.me/919871916980" target="_blank">Chat on WhatsApp <i
+                                    <a href="https://wa.me/919211610707" target="_blank">Chat on WhatsApp <i
                                             class="fab fa-whatsapp"></i></a>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="position">Position Seeking</label>
+                        <label for="position">Looking to hire </label>
                         <select id="position" name="position" class="form-control">
                             <option value="">Select position type</option>
                             <option value="ceo">CEO/MD</option>

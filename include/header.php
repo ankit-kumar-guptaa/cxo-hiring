@@ -1,7 +1,7 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <!-- Modern Header with Bootstrap -->
 <header id="header" class="sticky-top">
@@ -43,7 +43,7 @@
                             <li><a class="dropdown-item" href="full-scale-search.php"><i class="fas fa-search me-2 text-muted"></i> Full-Scale Search</a></li>
                             <li><a class="dropdown-item" href="virtual-cxo-services.php"><i class="fas fa-users me-2 text-muted"></i> Virtual CXO </a></li>
                             <li><a class="dropdown-item" href="confidential-executive-search.php"><i class="fas fa-lock me-2 text-muted"></i> Confidential Search</a></li>
-                            <li><a class="dropdown-item" href="transition-services.php"><i class="fas fa-exchange-alt me-2 text-muted"></i> Transition Services</a></li>
+                            <li><a class="dropdown-item" href="leader-transition-service.php"><i class="fas fa-exchange-alt me-2 text-muted"></i> Transition Services</a></li>
                             <li><a class="dropdown-item" href="board-advisory.php"><i class="fas fa-chalkboard-teacher me-2 text-muted"></i> Board Advisory</a></li>
                             <li><a class="dropdown-item" href="diversity-search.php"><i class="fas fa-users me-2 text-muted"></i> Diversity Search</a></li>
                             <li><a class="dropdown-item" href="interim-solutions.php"><i class="fas fa-clock me-2 text-muted"></i> Interim Solutions</a></li>
@@ -388,3 +388,19 @@
         }
     });
 </script>
+
+<?php 
+// Include notification system
+include_once 'include/notification.php'; 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <?php showNewsletterNotification(); ?>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>

@@ -10,12 +10,12 @@
         <div class="footer-about">
             <div class="footer-logo">CXO Hire</div>
             <p>Premier executive search firm specializing in C-suite and board-level placements across industries worldwide.</p>
-            <div class="footer-social">
+            <!-- <div class="footer-social">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+            </div> -->
         </div>
         <div class="footer-links">
             <h3>Quick Links</h3>
@@ -42,8 +42,8 @@
         <div class="footer-newsletter">
             <h3>Newsletter</h3>
             <p>Subscribe to our newsletter for the latest insights on executive leadership and talent trends.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your Email" class="newsletter-input" required>
+            <form class="newsletter-form" action="process_newsletter.php" method="POST">
+                <input type="email" name="email" placeholder="Your Email" class="newsletter-input" required>
                 <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
