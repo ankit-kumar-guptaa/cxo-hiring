@@ -20,7 +20,7 @@
         <div class="footer-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <!-- <li><a href="#services">Services</a></li> -->
                 <li><a href="process.php">Our Process</a></li>

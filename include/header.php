@@ -7,7 +7,7 @@
 <header id="header" class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="/">
                 <img src="logo.jpg" alt="Elite Corporate Solutions" height="80">
             </a>
 
@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="index.php"><i class="fas fa-home me-1"></i> Home</a>
+                        <a class="nav-link px-3" href="index.ph/"><i class="fas fa-home me-1"></i> Home</a>
                     </li>
 
                     <li class="nav-item">
