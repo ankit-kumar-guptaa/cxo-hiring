@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="index.ph/"><i class="fas fa-home me-1"></i> Home</a>
+                        <a class="nav-link px-3" href="/"><i class="fas fa-home me-1"></i> Home</a>
                     </li>
 
                     <li class="nav-item">
