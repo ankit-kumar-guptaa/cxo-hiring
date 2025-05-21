@@ -9,9 +9,13 @@ require 'vendor/autoload.php';
 
 // Database connection details
 $servername = "localhost";
-$username = "root"; // XAMPP default
-$password = ""; // XAMPP default
-$dbname = "cxo_hiring"; // आपके डेटाबेस का नाम यहां डालें
+$username = "recru2l1_cxo_hiring"; 
+$password = "Elite@007!"; 
+$dbname = "recru2l1_cxo_hiring"; 
+// $servername = "localhost";
+// $username = "root"; 
+// $password = ""; 
+// $dbname = "cxo_hiring"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

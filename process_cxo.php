@@ -39,9 +39,13 @@ $data = [
 try {
     // Database connection
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "cxo_hiring";
+    $username = "recru2l1_cxo_hiring";
+    $password = "Elite@007!";
+    $dbname = "recru2l1_cxo_hiring";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "cxo_hiring";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

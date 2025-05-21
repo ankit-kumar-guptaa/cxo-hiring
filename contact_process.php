@@ -6,9 +6,13 @@ require 'vendor/autoload.php';
 
 // Database credentials
 $db_host = 'localhost';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'cxo_hiring';
+$db_user = 'recru2l1_cxo_hiring';
+$db_pass = 'Elite@007!';
+$db_name = 'recru2l1_cxo_hiring';
+// $db_host = 'localhost';
+// $db_user = 'root';
+// $db_pass = '';
+// $db_name = 'cxo_hiring';
 
 // Connect to database
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
