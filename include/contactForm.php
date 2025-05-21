@@ -1,5 +1,5 @@
  
-      <!-- Contact Section -->
+<!-- Contact Section -->
       <section class="contact" id="contact">
         <div class="section-title">
             <h2 data-aos="fade-up">Connect With Our Executive Team</h2>
@@ -97,6 +97,19 @@
                         <label for="message">How Can We Assist You?*</label>
                         <textarea id="message" name="challenges" class="form-control" required></textarea>
                     </div>
+                    
+                    <!-- Canvas CAPTCHA Section -->
+                    <div class="form-group captcha-container">
+                        <label for="captchaInput">Security Verification*</label>
+                        <div class="captcha-box">
+                            <canvas id="captchaCanvas" width="180" height="50"></canvas>
+                            <button type="button" class="refresh-captcha" onclick="generateCaptcha()"><i class="fas fa-sync-alt"></i></button>
+                        </div>
+                        <input type="text" id="captchaInput" name="captcha" class="form-control" placeholder="Enter the code shown above" required>
+                        <div id="captcha-error" class="captcha-error d-none">Incorrect code. Please try again.</div>
+                        <small class="captcha-note">Please enter the characters shown above to verify you're human</small>
+                    </div>
+                    
                     <div class="form-footer">
                         <button type="submit" class="submit-btn">Submit Request <i
                                 class="fas fa-chevron-right"></i></button>
@@ -325,4 +338,156 @@
                 margin-bottom: 20px;
             }
         }
+        
+        /* Canvas CAPTCHA Styles */
+        .captcha-container {
+            margin-top: 20px;
+        }
+
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #captchaCanvas {
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .refresh-captcha {
+            background: #e2e8f0;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+        }
+
+        .refresh-captcha:hover {
+            background: #cbd5e1;
+            transform: rotate(15deg);
+        }
+
+        .refresh-captcha i {
+            font-size: 1.2rem;
+            color: #475569;
+        }
+
+        .captcha-note {
+            display: block;
+            margin-top: 8px;
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+        
+        .captcha-error {
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+        
+        .d-none {
+            display: none;
+        }
+        
+        .shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+            40%, 60% { transform: translate3d(3px, 0, 0); }
+        }
     </style>
+
+    <!-- Canvas CAPTCHA Script -->
+    <script>
+    let captchaText = '';
+
+    function generateCaptcha() {
+        const canvas = document.getElementById('captchaCanvas');
+        const ctx = canvas.getContext('2d');
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        captchaText = '';
+
+        // Generate random 6-character string
+        for (let i = 0; i < 6; i++) {
+            captchaText += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Background
+        ctx.fillStyle = '#f8f9fa';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Text
+        ctx.font = '24px Arial';
+        ctx.fillStyle = '#343a40';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        // Add distortion
+        for (let i = 0; i < captchaText.length; i++) {
+            ctx.save();
+            ctx.translate(20 + i * 20, 25);
+            ctx.rotate((Math.random() - 0.5) * 0.3);
+            ctx.fillText(captchaText[i], 0, 0);
+            ctx.restore();
+        }
+
+        // Minimal noise for performance
+        for (let i = 0; i < 20; i++) {
+            ctx.beginPath();
+            ctx.arc(
+                Math.random() * canvas.width,
+                Math.random() * canvas.height,
+                Math.random(),
+                0,
+                2 * Math.PI
+            );
+            ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.2})`;
+            ctx.fill();
+        }
+
+        // Clear input and reset error
+        document.getElementById('captchaInput').value = '';
+        document.getElementById('captcha-error').classList.add('d-none');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Generate CAPTCHA on load
+        generateCaptcha();
+        
+        // Form submission validation
+        const form = document.querySelector('.contact-form form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate CAPTCHA
+            const captchaInput = document.getElementById('captchaInput').value;
+            const captchaError = document.getElementById('captcha-error');
+            
+            if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
+                captchaError.classList.remove('d-none');
+                captchaError.classList.add('shake');
+                setTimeout(() => captchaError.classList.remove('shake'), 500);
+                return;
+            }
+            
+            // If CAPTCHA is valid, submit the form
+            form.submit();
+        });
+    });
+    </script>

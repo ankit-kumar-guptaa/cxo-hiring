@@ -4,6 +4,11 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+// Check if session is already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Database credentials
 $db_host = 'localhost';
 $db_user = 'recru2l1_cxo_hiring';
@@ -22,7 +27,7 @@ if ($conn->connect_error) {
 
 // Validate input
 $errors = [];
-$requiredFields = ['full_name', 'email', 'phone', 'position', 'challenges'];
+$requiredFields = ['full_name', 'email', 'phone', 'position', 'challenges', 'captcha'];
 
 foreach ($requiredFields as $field) {
     if (!isset($_POST[$field]) || empty(trim($_POST[$field]))) {
@@ -34,8 +39,23 @@ if (isset($_POST['email']) && !empty($_POST['email']) && !filter_var($_POST['ema
     $errors[] = 'Invalid email format';
 }
 
+// Note: CAPTCHA verification is now handled client-side with canvas
+// We still validate that captcha field is not empty as a basic check
+if (!isset($_POST['captcha']) || empty($_POST['captcha'])) {
+    $errors[] = 'CAPTCHA verification is required';
+}
+
 if (!empty($errors)) {
-    echo json_encode(['success' => false, 'message' => implode(', ', $errors)]);
+    // For AJAX submissions
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+        echo json_encode(['success' => false, 'message' => implode(', ', $errors)]);
+        exit;
+    }
+    
+    // For regular form submissions
+    $_SESSION['form_errors'] = $errors;
+    $_SESSION['form_data'] = $_POST;
+    header('Location: contact.php?error=1');
     exit;
 }
 
