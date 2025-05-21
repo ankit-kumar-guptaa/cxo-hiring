@@ -478,7 +478,7 @@
 
         .methodology-badge {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
             background-color: #f59e0b;
             color: white;
@@ -514,8 +514,8 @@
             <h2>Ready to Transform Your Leadership Team?</h2>
             <p>Partner with CXO Hiring to find the exceptional executive talent your organization needs to thrive.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Get Started <i class="fas fa-arrow-right"></i></a>
-                <a href="tel:+11234567890" class="cta-button secondary"><i class="fas fa-phone"></i> Call Us Now</a>
+                <a href="#he" class="cta-button">Get Started <i class="fas fa-arrow-right"></i></a>
+                <a href="tel:+919211610707" class="cta-button secondary"><i class="fas fa-phone"></i> Call Us Now</a>
             </div>
         </div>
     </section>
@@ -665,12 +665,12 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="section-title">
-            <h2 data-aos="fade-up">Connect With Our Executive Team</h2>
+            <h2 id="he" data-aos="fade-up">Connect With Our Executive Team</h2>
             <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation about your leadership needs
             </p>
         </div>
         <div class="contact-container">
-            <div class="contact-info">
+        <div class="contact-info">
                 <div class="contact-card" data-aos="fade-right">
                     <h3>Our Office</h3>
                     <div class="contact-details">
@@ -682,7 +682,7 @@
                                 <h4>Corporate Headquarters</h4>
                                 <p>916, Astralis Tower, Supernova<br>Sector 94, Noida, India</p>
                                 <div class="map-link">
-                                    <a href="https://maps.google.com" target="_blank">View on Map <i
+                                    <a href="https://maps.app.goo.gl/npsJKyqJ1aDGZeHe9" target="_blank">View on Map <i
                                             class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
@@ -693,9 +693,9 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Direct Line</h4>
-                                <p><a href="tel:+919871916980">+91 98719 16980</a></p>
+                                <p><a href="tel:+919211610707">+919211610707</a></p>
                                 <div class="whatsapp-link">
-                                    <a href="https://wa.me/919871916980" target="_blank">Chat on WhatsApp <i
+                                    <a href="https://wa.me/919211610707" target="_blank">Chat on WhatsApp <i
                                             class="fab fa-whatsapp"></i></a>
                                 </div>
                             </div>
@@ -706,9 +706,9 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:info@cxohire.com">info@cxohiring.com</a></p>
+                                <p><a href="mailto:info@cxohire.com">info@cxohire.com</a></p>
                                 <div class="email-link">
-                                    <a href="mailto:info@cxohiring.com">Send Email <i
+                                    <a href="mailto:info@cxohire.com">Send Email <i
                                             class="fas fa-paper-plane"></i></a>
                                 </div>
                             </div>
@@ -717,7 +717,7 @@
                     <div class="contact-hours">
                         <h4>Office Hours</h4>
                         <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                            Saturday: 10:00 AM - 4:00 PM</p>
+                            </p>
                     </div>
                 </div>
             </div>
@@ -989,13 +989,14 @@
             }
         }
     </style>
-
+   
 
     <!-- Popup Form HTML -->
     <div class="modal fade" id="cxoRecruitModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
         <div class="text-center w-100">
           <div class="bg-white bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
             <i class="fas fa-user-tie text-white"></i>

@@ -543,7 +543,7 @@
                     <p>From initial briefing to successful onboarding, our process combines market intelligence with behavioral science to deliver transformational leadership solutions.</p>
                     
                     <div class="mt-5">
-                        <a href="#" class="btn btn-primary btn-lg px-4 me-3">
+                        <a href="assets/CXO_Process.pdf" target="_blank" class="btn btn-primary btn-lg px-4 me-3">
                             <i class="fas fa-download me-2"></i> Download Process PDF
                         </a>
                     </div>
@@ -675,11 +675,11 @@
                 </div>
             </div>
             
-            <div class="text-center mt-5">
+            <!-- <div class="text-center mt-5">
                 <a href="#" class="btn btn-outline-primary btn-lg px-4">
                     <i class="fas fa-book-open me-2"></i> View All Case Studies
                 </a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -770,6 +770,9 @@
             </div>
         </div>
     </section>
+
+
+    <?php include "include/contactForm.php"?>
 
     <?php include "include/footer.php"; ?>
 

@@ -243,8 +243,9 @@
                     <p>Our confidential methodology has been refined over 12 years of sensitive executive searches across global markets.</p>
                     
                     <div class="mt-5">
-                        <button class="btn btn-primary btn-lg px-4 me-3">
+                        <button class="btn btn-primary btn-lg px-4 me-3"><a href="assets/CXO_Process.pdf" target="_blank" style="color: #f8fafc; text-decoration: none;">
                             <i class="fas fa-file-alt me-2"></i> Download Process
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -521,7 +522,7 @@
     </section>
 
     <!-- ===== GET STARTED ===== -->
-    <section class="py-5 bg-primary text-white">
+    <!-- <section class="py-5 bg-primary text-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
@@ -538,7 +539,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+<?php include "include/contactForm.php"?>
+
 
     <?php include "include/footer.php"; ?>
 

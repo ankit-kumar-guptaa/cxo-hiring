@@ -244,8 +244,8 @@
                     <p>Our phased methodology addresses cultural integration, stakeholder management, and quick wins while establishing long-term strategic foundations.</p>
                     
                     <div class="mt-5">
-                        <button class="btn btn-primary btn-lg px-4 me-3">
-                            <i class="fas fa-download me-2"></i> Download Roadmap
+                        <button class="btn btn-primary btn-lg px-4 me-3"><a href="assets/CXO_Hire_Leadership_Transition_Roadmap.pdf" style="color: #f8fafc; text-decoration: none;">
+                            <i class="fas fa-download me-2"></i> Download Roadmap</a>
                         </button>
                     </div>
                 </div>
@@ -544,6 +544,9 @@
             </div>
         </div>
     </section>
+
+
+    <?php include "include/contactForm.php"?>
 
     <?php include "include/footer.php"; ?>
 

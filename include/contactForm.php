@@ -2,7 +2,7 @@
 <!-- Contact Section -->
       <section class="contact" id="contact">
         <div class="section-title">
-            <h2 data-aos="fade-up">Connect With Our Executive Team</h2>
+            <h2 id="he" data-aos="fade-up">Connect With Our Executive Team</h2>
             <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation about your leadership needs
             </p>
         </div>
@@ -19,7 +19,7 @@
                                 <h4>Corporate Headquarters</h4>
                                 <p>916, Astralis Tower, Supernova<br>Sector 94, Noida, India</p>
                                 <div class="map-link">
-                                    <a href="https://maps.google.com" target="_blank">View on Map <i
+                                    <a href="https://maps.app.goo.gl/npsJKyqJ1aDGZeHe9" target="_blank">View on Map <i
                                             class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                     <div class="contact-hours">
                         <h4>Office Hours</h4>
                         <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                            Saturday: 10:00 AM - 4:00 PM</p>
+                            </p>
                     </div>
                 </div>
             </div>
