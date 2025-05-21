@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recipients
             $mail->setFrom('rajiv@greencarcarpool.com', 'CXO Hiring');
             $mail->addAddress($email); // Add subscriber
-            $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Add admin email
+            $mail->addAddress('ankit@elitecorporatesolutions.com'); // Add admin email
             
             // Content
             $mail->isHTML(true);
@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $adminMail->Port       = 587;
             
             $adminMail->setFrom('rajiv@greencarcarpool.com', 'CXO Hiring System');
-            $adminMail->addAddress('rajiv@elitecorporatesolutions.com');
+            $adminMail->addAddress('ankit@elitecorporatesolutions.com');
             
             $adminMail->isHTML(true);
             $adminMail->Subject = 'New Newsletter Subscription';

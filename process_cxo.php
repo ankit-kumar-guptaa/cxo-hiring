@@ -88,7 +88,7 @@ try {
     
     // Recipients
     $mail->setFrom('rajiv@greencarcarpool.com', 'CXO Recruitment');
-    $mail->addAddress('rajiv@elitecorporatesolutions.com', 'Admin');
+    $mail->addAddress('ankit@elitecorporatesolutions.com', 'Admin');
     
     // Content
     $mail->isHTML(true);

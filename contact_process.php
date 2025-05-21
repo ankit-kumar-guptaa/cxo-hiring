@@ -92,7 +92,7 @@ try {
     $mail->Port       = 587;
 
     $mail->setFrom('rajiv@greencarcarpool.com', 'CXO Recruitment');
-    $mail->addAddress('rajiv@elitecorporatesolutions.com', 'Admin');
+    $mail->addAddress('ankit@elitecorporatesolutions.com', 'Admin');
 
     $mail->isHTML(true);
     $mail->Subject = 'New CXO Request: ' . $data['position'];
