@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Elite Corporate Solutions</title>
     <?php include "include/assets.php"?>
+
+<!-- Event snippet for Submit lead form conversion page -->
+
+
+
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-17101803710/i528CIDbn8saEL6h49o_'});
+</script>
+
     <style>
         .thank-you-section {
             padding: 80px 0;
