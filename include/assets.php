@@ -5,3 +5,21 @@
         <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
    <link rel="stylesheet" href="assets/css/style.css">
 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17101803710"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17101803710');
+</script>
+
+
+<script>
+  gtag('config', 'AW-17101803710/Xfm6COnirssaEL6h49o_', {
+    'phone_conversion_number': '+919211610707'
+  });
+</script>
+
