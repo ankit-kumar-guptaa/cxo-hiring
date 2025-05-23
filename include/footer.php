@@ -4,7 +4,7 @@
     <div class="contact-us-btn-wrapper">
         <button class="contact-us-btn">
             <span>Contact Us</span>
-            <i class="fas fa-plus contact-icon"></i>
+            <i class="fas fa-plus contact-iconn"></i>
         </button>
         <div class="contact-us-details">
             <button class="contact-us-close">×</button>
@@ -150,11 +150,11 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .contact-us-btn.active .contact-icon {
+    .contact-us-btn.active .contact-iconn {
         transform: rotate(45deg);
     }
 
-    .contact-icon {
+    .contact-iconn {
         font-size: 12px;
         transition: transform 0.3s ease;
     }

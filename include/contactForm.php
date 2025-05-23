@@ -9,7 +9,7 @@
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-card" data-aos="fade-right">
-                    <h3>Our Office</h3>
+                    <h3>Our Offices</h3>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -18,10 +18,41 @@
                             <div class="contact-text">
                                 <h4>Corporate Headquarters</h4>
                                 <p>916, Astralis Tower, Supernova<br>Sector 94, Noida, India</p>
+                                <p><a href="tel:+919211610707">+91 92116 10707</a></p>
                                 <div class="map-link">
                                     <a href="https://maps.app.goo.gl/npsJKyqJ1aDGZeHe9" target="_blank">View on Map <i
                                             class="fas fa-external-link-alt"></i></a>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>New Delhi Office</h4>
+                                <p>A-83, Okhla Phase II<br>New Delhi - 110020</p>
+                                <p><a href="tel:+919871916980">+91 98719 16980</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Hyderabad Branch</h4>
+                                <p>eSeva Ln, K P H B Phase 3<br>Kukatpally, Hyderabad<br>Telangana 500072</p>
+                                <p><a href="tel:+918328206115">+91 83282 06115</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Pune Branch</h4>
+                                <p>2nd Floor, River side Business Bay<br>Plot no. 84, Wellesley Road<br>Near RTO (Sangam Bridge)<br>Pune, Maharashtra 411001</p>
+                                <p><a href="tel:+918788956738">+91 87889 56738</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
