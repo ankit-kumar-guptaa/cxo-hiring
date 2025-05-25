@@ -1020,7 +1020,7 @@
         </div>
       </div>
 
-      <form id="cxoRecruitForm" action="process_cxo.php" method="POST">
+      <form id="cxoRecruitForm" action="process_cxo.php" method="POST" onsubmit="event.preventDefault(); executeRecaptcha('cxo_recruit', 'cxoRecruitForm').then(() => this.submit());">
         <!-- Step 1 -->
         <div class="modal-body form-step active" data-step="1">
           <div class="row g-3">
@@ -1081,14 +1081,7 @@
           </div>
 
           <div class="mb-3">
-            <div class="custom-captcha">
-              <canvas id="captchaCanvas" width="150" height="50"></canvas>
-              <button type="button" class="btn btn-sm btn-outline-secondary ms-2" onclick="generateCaptcha()">Refresh</button>
-              <input type="text" id="captchaInput" class="form-control mt-2" placeholder="Enter CAPTCHA*" required>
-              <div class="captcha-error d-none" id="captcha-error">
-                <i class="fas fa-exclamation-circle me-1"></i> Incorrect CAPTCHA. Please try again.
-              </div>
-            </div>
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-cxo">
           </div>
         </div>
 
@@ -1302,6 +1295,28 @@ function generateCaptcha() {
     document.getElementById('captcha-error').classList.add('d-none');
 }
 
+// reCAPTCHA execution function
+async function executeRecaptcha(action, formId) {
+    return new Promise((resolve, reject) => {
+        try {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: action})
+                    .then(function(token) {
+                        document.getElementById('g-recaptcha-response-cxo').value = token;
+                        resolve(token);
+                    })
+                    .catch(function(error) {
+                        console.error('reCAPTCHA error:', error);
+                        reject(error);
+                    });
+            });
+        } catch (error) {
+            console.error('reCAPTCHA execution error:', error);
+            reject(error);
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const cxoModal = new bootstrap.Modal(document.getElementById('cxoRecruitModal'));
     const successModal = new bootstrap.Modal(document.getElementById('successModal'));
@@ -1344,6 +1359,9 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
+        const currentStep = document.querySelector('.form-step.active');
+        if (!validateStep(currentStep)) return;
+        
         // Validate CAPTCHA
         const captchaInput = document.getElementById('captchaInput').value;
         const captchaError = document.getElementById('captcha-error');
@@ -1358,6 +1376,9 @@ document.addEventListener('DOMContentLoaded', function() {
         loader.classList.remove('d-none');
         
         try {
+            // Execute reCAPTCHA
+            await executeRecaptcha('cxo_recruit', 'cxoRecruitForm');
+            
             const formData = new FormData(form);
             const response = await fetch(form.action, {
                 method: 'POST',

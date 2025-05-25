@@ -25,9 +25,47 @@ if ($conn->connect_error) {
     die('Database connection failed: ' . $conn->connect_error);
 }
 
+// Verify reCAPTCHA
+$recaptcha_secret = "6LfVUUgrAAAAACYZdWO_B2g-JS8dzvsHHvygr7Cy";
+$recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+
+// Make request to Google reCAPTCHA API
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+$recaptcha_data = [
+    'secret' => $recaptcha_secret,
+    'response' => $recaptcha_response,
+    'remoteip' => $_SERVER['REMOTE_ADDR']
+];
+
+$recaptcha_options = [
+    'http' => [
+        'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method' => 'POST',
+        'content' => http_build_query($recaptcha_data)
+    ]
+];
+
+$recaptcha_context = stream_context_create($recaptcha_options);
+$recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+$recaptcha_json = json_decode($recaptcha_result, true);
+
+// Check if reCAPTCHA verification failed
+if (!$recaptcha_json['success'] || $recaptcha_json['score'] < 0.5) {
+    // For AJAX submissions
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+        echo json_encode(['success' => false, 'message' => 'Bot activity detected. Please try again.']);
+        exit;
+    }
+    
+    // For regular form submissions
+    $_SESSION['form_errors'] = ['Bot activity detected. Please try again.'];
+    header('Location: contact.php?error=1');
+    exit;
+}
+
 // Validate input
 $errors = [];
-$requiredFields = ['full_name', 'email', 'phone', 'position', 'challenges', 'captcha'];
+$requiredFields = ['full_name', 'email', 'phone', 'position', 'challenges'];
 
 foreach ($requiredFields as $field) {
     if (!isset($_POST[$field]) || empty(trim($_POST[$field]))) {
@@ -37,12 +75,6 @@ foreach ($requiredFields as $field) {
 
 if (isset($_POST['email']) && !empty($_POST['email']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     $errors[] = 'Invalid email format';
-}
-
-// Note: CAPTCHA verification is now handled client-side with canvas
-// We still validate that captcha field is not empty as a basic check
-if (!isset($_POST['captcha']) || empty($_POST['captcha'])) {
-    $errors[] = 'CAPTCHA verification is required';
 }
 
 if (!empty($errors)) {
@@ -84,10 +116,10 @@ try {
     // Send email to admin
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host       = 'smtp.rediffmailpro.com';
+    $mail->Host       = 'smtp.hostinger.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'cxo@elitecorporatesolutions.com';
-    $mail->Password   = 'Cxo@2025!';
+    $mail->Username   = 'rajiv@greencarcarpool.com';
+    $mail->Password   = 'Rajiv@111@';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 

@@ -27,6 +27,36 @@ if ($conn->connect_error) {
 
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verify reCAPTCHA
+    $recaptcha_secret = "6LfVUUgrAAAAACYZdWO_B2g-JS8dzvsHHvygr7Cy";
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+    
+    // Make request to Google reCAPTCHA API
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = [
+        'secret' => $recaptcha_secret,
+        'response' => $recaptcha_response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+    
+    $recaptcha_options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        ]
+    ];
+    
+    $recaptcha_context = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_json = json_decode($recaptcha_result, true);
+    
+    // Check if reCAPTCHA verification failed
+    if (!$recaptcha_json['success'] || $recaptcha_json['score'] < 0.5) {
+        header("Location: index.php?newsletter=bot");
+        exit;
+    }
+    
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     
     // Validate email
@@ -62,10 +92,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // Server settings
             $mail->isSMTP();
-            $mail->Host       = 'smtp.rediffmailpro.com';
+            $mail->Host       = 'smtp.hostinger.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'cxo@elitecorporatesolutions.com';
-            $mail->Password   = 'Cxo@2025!';
+            $mail->Username   = 'rajiv@greencarcarpool.com';
+            $mail->Password   = 'Rajiv@111@';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
             

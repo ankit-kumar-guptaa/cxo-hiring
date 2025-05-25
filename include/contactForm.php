@@ -91,7 +91,8 @@
             </div>
             <div class="contact-form" data-aos="fade-left">
                 <h3>Request a Consultation</h3>
-                <form action="contact_process.php" method="POST">
+                <!-- फॉर्म टैग में onsubmit इवेंट जोड़ें -->
+                <form action="contact_process.php" method="POST" id="contact-form" onsubmit="event.preventDefault(); executeRecaptcha('contact', 'contact-form').then(() => this.submit());">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name*</label>
@@ -147,6 +148,8 @@
                         <p class="disclaimer">We respect your privacy. All information is kept strictly confidential.
                         </p>
                     </div>
+                    <!-- फॉर्म के अंत में hidden input फील्ड जोड़ें -->
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-contact">
                 </form>
             </div>
         </div>

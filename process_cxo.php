@@ -6,6 +6,24 @@ require 'vendor/autoload.php';
 
 header('Content-Type: application/json');
 
+// Google reCAPTCHA v3 verification
+$recaptcha_secret = '6LfVUUgrAAAAACYZdWO_B2g-JS8dzvsHHvygr7Cy';
+$recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+
+// Verify reCAPTCHA
+if (empty($recaptcha_response)) {
+    echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed. Please try again.']);
+    exit;
+}
+
+$recaptcha_verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}");
+$recaptcha_verify = json_decode($recaptcha_verify);
+
+if (!$recaptcha_verify->success || $recaptcha_verify->score < 0.5) {
+    echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed. Please try again.']);
+    exit;
+}
+
 // Validate input
 $errors = [];
 $requiredFields = ['full_name', 'email', 'phone', 'position', 'challenges'];
@@ -79,10 +97,10 @@ try {
     
     // SMTP Configuration
     $mail->isSMTP();
-    $mail->Host       = 'smtp.rediffmailpro.com';
+    $mail->Host       = 'smtp.hostinger.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'cxo@elitecorporatesolutions.com';
-    $mail->Password   = 'Cxo@2025!';
+    $mail->Username   = 'rajiv@greencarcarpool.com';
+    $mail->Password   = 'Rajiv@111@';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     
@@ -141,3 +159,4 @@ try {
     echo json_encode(['success' => false, 'message' => "Error: " . $e->getMessage()]);
     exit;
 }
+?>

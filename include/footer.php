@@ -101,7 +101,7 @@
         <div class="footer-newsletter">
             <h3>Newsletter</h3>
             <p>Subscribe to our newsletter for the latest insights on executive leadership and talent trends.</p>
-            <form class="newsletter-form" action="process_newsletter.php" method="POST">
+            <form class="newsletter-form" id="newsletter-form" action="process_newsletter.php" method="POST" onsubmit="event.preventDefault(); executeRecaptcha('newsletter', 'newsletter-form').then(() => this.submit());">
                 <input type="email" name="email" placeholder="Your Email" class="newsletter-input" required>
                 <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
             </form>
@@ -117,6 +117,35 @@
 
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Google reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LfVUUgrAAAAAKFj7HuGET-_vJ7ZcCztfDkdxPEy"></script>
+<script>
+function executeRecaptcha(action, formId) {
+    return new Promise((resolve, reject) => {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LfVUUgrAAAAAKFj7HuGET-_vJ7ZcCztfDkdxPEy', {action: action})
+                .then(function(token) {
+                    // Add token to form
+                    const form = document.getElementById(formId);
+                    if (form) {
+                        let recaptchaInput = form.querySelector('input[name="g-recaptcha-response"]');
+                        if (!recaptchaInput) {
+                            recaptchaInput = document.createElement('input');
+                            recaptchaInput.type = 'hidden';
+                            recaptchaInput.name = 'g-recaptcha-response';
+                            form.appendChild(recaptchaInput);
+                        }
+                        recaptchaInput.value = token;
+                        resolve(token);
+                    } else {
+                        reject('Form not found');
+                    }
+                });
+        });
+    });
+}
+</script>
 
 <style>
     /* WhatsApp Button Styles */
