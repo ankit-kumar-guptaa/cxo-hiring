@@ -28,6 +28,51 @@
     <a href="https://wa.me/919211460101?text=Hi" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:+919211610707" class="call-btn" target="_blank">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <style>
+        /* Call Button Styles */
+        .call-btn {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            text-decoration: none;
+            animation: shake 2s infinite;
+        }
+        
+        .call-btn:hover {
+            background-color: #0056b3;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            2% { transform: rotate(-5deg); }
+            4% { transform: rotate(5deg); }
+            6% { transform: rotate(-5deg); }
+            8% { transform: rotate(5deg); }
+            10% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
     <div class="footer-container">
         <div class="footer-about">
             <div class="footer-logo">CXO Hire</div>

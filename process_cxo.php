@@ -79,10 +79,10 @@ try {
     
     // SMTP Configuration
     $mail->isSMTP();
-    $mail->Host       = 'smtp.hostinger.com';
+    $mail->Host       = 'smtp.rediffmailpro.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'rajiv@greencarcarpool.com';
-    $mail->Password   = 'Rajiv@111@';
+    $mail->Username   = 'cxo@elitecorporatesolutions.com';
+    $mail->Password   = 'Cxo@2025!';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     
