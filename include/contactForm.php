@@ -131,7 +131,7 @@
                     </div>
                     
                     <!-- Canvas CAPTCHA Section -->
-                    <div class="form-group captcha-container">
+                    <!-- <div class="form-group captcha-container">
                         <label for="captchaInput">Security Verification*</label>
                         <div class="captcha-box">
                             <canvas id="captchaCanvas" width="180" height="50"></canvas>
@@ -140,7 +140,7 @@
                         <input type="text" id="captchaInput" name="captcha" class="form-control" placeholder="Enter the code shown above" required>
                         <div id="captcha-error" class="captcha-error d-none">Incorrect code. Please try again.</div>
                         <small class="captcha-note">Please enter the characters shown above to verify you're human</small>
-                    </div>
+                    </div> -->
                     
                     <div class="form-footer">
                         <button type="submit" class="submit-btn">Submit Request <i
@@ -444,84 +444,67 @@
         }
     </style>
 
-    <!-- Canvas CAPTCHA Script -->
-    <script>
-    let captchaText = '';
-
-    function generateCaptcha() {
-        const canvas = document.getElementById('captchaCanvas');
-        const ctx = canvas.getContext('2d');
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        captchaText = '';
-
-        // Generate random 6-character string
-        for (let i = 0; i < 6; i++) {
-            captchaText += characters.charAt(Math.floor(Math.random() * characters.length));
+<script>
+// reCAPTCHA execution function
+async function executeRecaptcha(action, formId) {
+    return new Promise((resolve, reject) => {
+        try {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LfVUUgrAAAAAKFj7HuGET-_vJ7ZcCztfDkdxPEy', {action: action})
+                    .then(function(token) {
+                        document.getElementById('g-recaptcha-response-contact').value = token;
+                        resolve(token);
+                    })
+                    .catch(function(error) {
+                        console.error('reCAPTCHA error:', error);
+                        reject(error);
+                    });
+            });
+        } catch (error) {
+            console.error('reCAPTCHA execution error:', error);
+            reject(error);
         }
-
-        // Clear canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Background
-        ctx.fillStyle = '#f8f9fa';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Text
-        ctx.font = '24px Arial';
-        ctx.fillStyle = '#343a40';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-
-        // Add distortion
-        for (let i = 0; i < captchaText.length; i++) {
-            ctx.save();
-            ctx.translate(20 + i * 20, 25);
-            ctx.rotate((Math.random() - 0.5) * 0.3);
-            ctx.fillText(captchaText[i], 0, 0);
-            ctx.restore();
-        }
-
-        // Minimal noise for performance
-        for (let i = 0; i < 20; i++) {
-            ctx.beginPath();
-            ctx.arc(
-                Math.random() * canvas.width,
-                Math.random() * canvas.height,
-                Math.random(),
-                0,
-                2 * Math.PI
-            );
-            ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.2})`;
-            ctx.fill();
-        }
-
-        // Clear input and reset error
-        document.getElementById('captchaInput').value = '';
-        document.getElementById('captcha-error').classList.add('d-none');
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Generate CAPTCHA on load
-        generateCaptcha();
-        
-        // Form submission validation
-        const form = document.querySelector('.contact-form form');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validate CAPTCHA
-            const captchaInput = document.getElementById('captchaInput').value;
-            const captchaError = document.getElementById('captcha-error');
-            
-            if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
-                captchaError.classList.remove('d-none');
-                captchaError.classList.add('shake');
-                setTimeout(() => captchaError.classList.remove('shake'), 500);
-                return;
-            }
-            
-            // If CAPTCHA is valid, submit the form
-            form.submit();
-        });
     });
-    </script>
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form form');
+    const loader = document.getElementById('loader');
+
+    // Form submission
+    form?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Basic form validation
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+        
+        if (!isValid) return;
+        
+        try {
+            // Show loader if exists
+            if (loader) loader.classList.remove('d-none');
+            
+            // Execute reCAPTCHA
+            await executeRecaptcha('contact', 'contact-form');
+            
+            // Submit the form
+            form.submit();
+            
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('There was an error submitting the form. Please try again.');
+            if (loader) loader.classList.add('d-none');
+        }
+    });
+});
+</script>

@@ -1269,44 +1269,76 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('cxoRecruitForm');
     const loader = document.getElementById('loader');
 
-    // Open modal
+    // Define resetForm function
+    function resetForm() {
+        if (form) {
+            form.reset();
+            // Reset validation states
+            form.querySelectorAll('.is-invalid').forEach(el => {
+                el.classList.remove('is-invalid');
+            });
+            // Reset to first step
+            const steps = form.querySelectorAll('.form-step');
+            steps.forEach(step => step.classList.remove('active'));
+            steps[0]?.classList.add('active');
+            updateProgress(1);
+        }
+    }
+
+    // Open modal with error handling
     document.querySelectorAll('.open-cxo-modal').forEach(btn => {
-        btn.addEventListener('click', function() {
-            resetForm();
-            cxoModal.show();
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            try {
+                resetForm();
+                cxoModal.show();
+            } catch (error) {
+                console.error('Modal open error:', error);
+                alert('There was an error opening the form. Please try again.');
+            }
         });
     });
 
-    // Form navigation
-    document.querySelector('.next-step').addEventListener('click', function() {
-        const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
-        const nextStep = currentStep.nextElementSibling;
-        
-        if (validateStep(currentStep)) {
-            currentStep.classList.remove('active');
-            nextStep.classList.add('active');
-            updateProgress(2);
+    // Form navigation with error handling
+    document.querySelector('.next-step')?.addEventListener('click', function() {
+        try {
+            const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
+            const nextStep = currentStep?.nextElementSibling;
+            
+            if (currentStep && nextStep && validateStep(currentStep)) {
+                currentStep.classList.remove('active');
+                nextStep.classList.add('active');
+                updateProgress(2);
+            }
+        } catch (error) {
+            console.error('Navigation error:', error);
         }
     });
 
-    document.querySelector('.prev-step').addEventListener('click', function() {
-        const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
-        const prevStep = currentStep.previousElementSibling;
-        
-        currentStep.classList.remove('active');
-        prevStep.classList.add('active');
-        updateProgress(1);
+    document.querySelector('.prev-step')?.addEventListener('click', function() {
+        try {
+            const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
+            const prevStep = currentStep?.previousElementSibling;
+            
+            if (currentStep && prevStep) {
+                currentStep.classList.remove('active');
+                prevStep.classList.add('active');
+                updateProgress(1);
+            }
+        } catch (error) {
+            console.error('Navigation error:', error);
+        }
     });
 
     // Form submission
-    form.addEventListener('submit', async function(e) {
+    form?.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const currentStep = document.querySelector('.form-step.active');
         if (!validateStep(currentStep)) return;
         
         // Show loader
-        loader.classList.remove('d-none');
+        loader?.classList.remove('d-none');
         
         try {
             // Execute reCAPTCHA
@@ -1322,24 +1354,25 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             const data = await response.json();
-            loader.classList.add('d-none');
+            loader?.classList.add('d-none');
             
             if (data.success) {
                 cxoModal.hide();
                 successModal.show();
-                form.reset();
+                resetForm();
             } else {
                 alert('Error: ' + (data.message || 'Please try again.'));
             }
         } catch (error) {
-            loader.classList.add('d-none');
-            console.error('Error:', error);
-            alert('There was an error. Please try again.');
+            loader?.classList.add('d-none');
+            console.error('Form submission error:', error);
+            alert('There was an error submitting the form. Please try again.');
         }
     });
 
     // Helper functions
     function validateStep(step) {
+        if (!step) return false;
         let isValid = true;
         step.querySelectorAll('[required]').forEach(input => {
             if (!input.value.trim()) {
