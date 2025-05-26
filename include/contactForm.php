@@ -469,7 +469,7 @@ async function executeRecaptcha(action, formId) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form form');
-    const loader = document.getElementById('loader');
+    const submitBtn = document.querySelector('.submit-btn');
 
     // Form submission
     form?.addEventListener('submit', async function(e) {
@@ -491,8 +491,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isValid) return;
         
         try {
-            // Show loader if exists
-            if (loader) loader.classList.remove('d-none');
+            // Disable button and show loader
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Submitting...';
+            }
             
             // Execute reCAPTCHA
             await executeRecaptcha('contact', 'contact-form');
@@ -503,8 +506,40 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Form submission error:', error);
             alert('There was an error submitting the form. Please try again.');
-            if (loader) loader.classList.add('d-none');
+            
+            // Reset button state
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Request <i class="fas fa-chevron-right"></i>';
+            }
         }
     });
 });
 </script>
+<style>
+.spinner-border {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 0.15em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.1em;
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+@keyframes spinner-border {
+    to { transform: rotate(360deg); }
+}
+
+
+</style>

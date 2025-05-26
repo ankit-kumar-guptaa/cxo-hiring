@@ -106,7 +106,7 @@ try {
     
     // Recipients
     $mail->setFrom('rajiv@greencarcarpool.com', 'CXO Recruitment');
-    $mail->addAddress('ankit@elitecorporatesolutions.com', 'Admin');
+    $mail->addAddress('rajiv@elitecorporatesolutions.com', 'Admin');
     
     // Content
     $mail->isHTML(true);
@@ -154,6 +154,8 @@ try {
     $userMail->send();
     
     echo json_encode(['success' => true]);
+    // Redirect to thank you page
+    header('Location: thankyou.php');
     
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => "Error: " . $e->getMessage()]);

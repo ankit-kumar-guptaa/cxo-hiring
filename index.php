@@ -1264,111 +1264,118 @@ async function executeRecaptcha(action, formId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const cxoModal = new bootstrap.Modal(document.getElementById('cxoRecruitModal'));
-    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    // Modal elements
+    const cxoModal = document.getElementById('cxoRecruitModal');
+    const successModal = document.getElementById('successModal');
     const form = document.getElementById('cxoRecruitForm');
     const loader = document.getElementById('loader');
-
-    // Define resetForm function
-    function resetForm() {
-        if (form) {
-            form.reset();
-            // Reset validation states
-            form.querySelectorAll('.is-invalid').forEach(el => {
-                el.classList.remove('is-invalid');
-            });
-            // Reset to first step
-            const steps = form.querySelectorAll('.form-step');
-            steps.forEach(step => step.classList.remove('active'));
-            steps[0]?.classList.add('active');
-            updateProgress(1);
-        }
-    }
-
-    // Open modal with error handling
+    const submitBtn = document.getElementById('submitBtn');
+    const nextBtn = document.querySelector('.next-step');
+    const prevBtn = document.querySelector('.prev-step');
+    
+    // Open modal when clicking on the open-cxo-modal buttons/links
     document.querySelectorAll('.open-cxo-modal').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            try {
-                resetForm();
-                cxoModal.show();
-            } catch (error) {
-                console.error('Modal open error:', error);
-                alert('There was an error opening the form. Please try again.');
-            }
+            resetFormState(); // Reset form before showing
+            const bsModal = new bootstrap.Modal(cxoModal);
+            bsModal.show();
         });
     });
 
-    // Form navigation with error handling
-    document.querySelector('.next-step')?.addEventListener('click', function() {
-        try {
+    // Form navigation
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
             const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
             const nextStep = currentStep?.nextElementSibling;
             
-            if (currentStep && nextStep && validateStep(currentStep)) {
+            if (validateStep(currentStep)) {
                 currentStep.classList.remove('active');
                 nextStep.classList.add('active');
                 updateProgress(2);
+                
+                // Show submit button, hide next button on last step
+                nextBtn.classList.add('d-none');
+                submitBtn.classList.remove('d-none');
+                prevBtn.classList.remove('d-none');
             }
-        } catch (error) {
-            console.error('Navigation error:', error);
-        }
-    });
+        });
+    }
 
-    document.querySelector('.prev-step')?.addEventListener('click', function() {
-        try {
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
             const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
             const prevStep = currentStep?.previousElementSibling;
             
-            if (currentStep && prevStep) {
-                currentStep.classList.remove('active');
-                prevStep.classList.add('active');
-                updateProgress(1);
+            currentStep.classList.remove('active');
+            prevStep.classList.add('active');
+            updateProgress(1);
+            
+            // Show next button, hide submit button on first step
+            nextBtn.classList.remove('d-none');
+            submitBtn.classList.add('d-none');
+            if (prevStep.dataset.step === '1') {
+                prevBtn.classList.add('d-none');
             }
-        } catch (error) {
-            console.error('Navigation error:', error);
-        }
-    });
+        });
+    }
 
     // Form submission
-    form?.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const currentStep = document.querySelector('.form-step.active');
-        if (!validateStep(currentStep)) return;
-        
-        // Show loader
-        loader?.classList.remove('d-none');
-        
-        try {
-            // Execute reCAPTCHA
-            await executeRecaptcha('cxo_recruit', 'cxoRecruitForm');
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            const formData = new FormData(form);
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            
-            const data = await response.json();
-            loader?.classList.add('d-none');
-            
-            if (data.success) {
-                cxoModal.hide();
-                successModal.show();
-                resetForm();
-            } else {
-                alert('Error: ' + (data.message || 'Please try again.'));
+            if (!validateStep(document.querySelector('.form-step.active'))) {
+                return;
             }
-        } catch (error) {
-            loader?.classList.add('d-none');
-            console.error('Form submission error:', error);
-            alert('There was an error submitting the form. Please try again.');
-        }
-    });
+
+            try {
+                // Remove loader functionality
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                }
+                
+                // Execute reCAPTCHA
+                await executeRecaptcha('cxo_recruit', 'cxoRecruitForm');
+                
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Hide form modal, show success modal
+                    if (cxoModal) {
+                        const bsModal = bootstrap.Modal.getInstance(cxoModal) || new bootstrap.Modal(cxoModal);
+                        bsModal.hide();
+                    }
+                    
+                    if (successModal) {
+                        const successBsModal = new bootstrap.Modal(successModal);
+                        successBsModal.show();
+                    }
+                    
+                    // Reset form
+                    form.reset();
+                    resetFormState();
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('Form submission failed. Please try again.');
+            } finally {
+                // Reset button without loader
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Submit <i class="fas fa-paper-plane ms-2"></i>';
+                }
+            }
+        });
+    }
 
     // Helper functions
     function validateStep(step) {
@@ -1389,6 +1396,26 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.progress-step').forEach(stepEl => {
             stepEl.classList.toggle('active', parseInt(stepEl.dataset.step) <= step);
         });
+    }
+
+    function resetFormState() {
+        if (!form) return;
+        
+        // Reset to first step
+        const steps = form.querySelectorAll('.form-step');
+        steps.forEach(step => step.classList.remove('active'));
+        if (steps[0]) steps[0].classList.add('active');
+        
+        // Reset buttons
+        if (nextBtn) nextBtn.classList.remove('d-none');
+        if (submitBtn) submitBtn.classList.add('d-none');
+        if (prevBtn) prevBtn.classList.add('d-none');
+        
+        // Reset progress
+        updateProgress(1);
+        
+        // Clear validation states
+        form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
     }
 });
 </script>
