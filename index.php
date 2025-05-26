@@ -1241,66 +1241,12 @@
 </style>
 
 <script>
-let captchaText = '';
-
-function generateCaptcha() {
-    const canvas = document.getElementById('captchaCanvas');
-    const ctx = canvas.getContext('2d');
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    captchaText = '';
-
-    // Generate random 6-character string
-    for (let i = 0; i < 6; i++) {
-        captchaText += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-
-    // Clear canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Background
-    ctx.fillStyle = '#f8f9fa';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // Text
-    ctx.font = '24px Arial';
-    ctx.fillStyle = '#343a40';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-
-    // Add distortion
-    for (let i = 0; i < captchaText.length; i++) {
-        ctx.save();
-        ctx.translate(20 + i * 20, 25);
-        ctx.rotate((Math.random() - 0.5) * 0.3);
-        ctx.fillText(captchaText[i], 0, 0);
-        ctx.restore();
-    }
-
-    // Minimal noise for performance
-    for (let i = 0; i < 20; i++) {
-        ctx.beginPath();
-        ctx.arc(
-            Math.random() * canvas.width,
-            Math.random() * canvas.height,
-            Math.random(),
-            0,
-            2 * Math.PI
-        );
-        ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.2})`;
-        ctx.fill();
-    }
-
-    // Clear input and reset error
-    document.getElementById('captchaInput').value = '';
-    document.getElementById('captcha-error').classList.add('d-none');
-}
-
 // reCAPTCHA execution function
 async function executeRecaptcha(action, formId) {
     return new Promise((resolve, reject) => {
         try {
             grecaptcha.ready(function() {
-                grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: action})
+                grecaptcha.execute('6LfVUUgrAAAAAKFj7HuGET-_vJ7ZcCztfDkdxPEy', {action: action})
                     .then(function(token) {
                         document.getElementById('g-recaptcha-response-cxo').value = token;
                         resolve(token);
@@ -1322,9 +1268,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const successModal = new bootstrap.Modal(document.getElementById('successModal'));
     const form = document.getElementById('cxoRecruitForm');
     const loader = document.getElementById('loader');
-    
-    // Generate CAPTCHA on load
-    generateCaptcha();
 
     // Open modal
     document.querySelectorAll('.open-cxo-modal').forEach(btn => {
@@ -1362,16 +1305,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentStep = document.querySelector('.form-step.active');
         if (!validateStep(currentStep)) return;
         
-        // Validate CAPTCHA
-        const captchaInput = document.getElementById('captchaInput').value;
-        const captchaError = document.getElementById('captcha-error');
-        if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
-            captchaError.classList.remove('d-none');
-            captchaError.classList.add('shake');
-            setTimeout(() => captchaError.classList.remove('shake'), 500);
-            return;
-        }
-        
         // Show loader
         loader.classList.remove('d-none');
         
@@ -1395,7 +1328,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 cxoModal.hide();
                 successModal.show();
                 form.reset();
-                generateCaptcha();
             } else {
                 alert('Error: ' + (data.message || 'Please try again.'));
             }
@@ -1417,21 +1349,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.classList.remove('is-invalid');
             }
         });
-
-        // Validate CAPTCHA only on second step
-        if (step.dataset.step === '2') {
-            const captchaInput = document.getElementById('captchaInput').value;
-            const captchaError = document.getElementById('captcha-error');
-            if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
-                captchaError.classList.remove('d-none');
-                captchaError.classList.add('shake');
-                setTimeout(() => captchaError.classList.remove('shake'), 500);
-                isValid = false;
-            } else {
-                captchaError.classList.add('d-none');
-            }
-        }
-
         return isValid;
     }
 
@@ -1439,24 +1356,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.progress-step').forEach(stepEl => {
             stepEl.classList.toggle('active', parseInt(stepEl.dataset.step) <= step);
         });
-        
-        document.querySelector('.prev-step').classList.toggle('d-none', step === 1);
-        document.querySelector('.next-step').classList.toggle('d-none', step === 2);
-        document.querySelector('.submit-form').classList.toggle('d-none', step !== 2);
     }
-
-    function resetForm() {
-        form.reset();
-        document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
-        document.querySelector('.form-step[data-step="1"]').classList.add('active');
-        updateProgress(1);
-        document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
-        document.getElementById('captcha-error').classList.add('d-none');
-        generateCaptcha();
-    }
-    
-    // Initialize
-    updateProgress(1);
 });
 </script>
     <?php include "include/footer.php" ?>
