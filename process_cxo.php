@@ -153,7 +153,7 @@ try {
     
     $userMail->send();
     
-    echo json_encode(['success' => true]);
+    // echo json_encode(['success' => true]);
     // Redirect to thank you page
     header('Location: thankyou.php');
     
