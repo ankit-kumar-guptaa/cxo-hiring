@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# निम्नलिखित फाइलों और फोल्डर्स को क्रॉल न करें
+Disallow: /vendor/
+Disallow: /include/
+Disallow: /assets/
+Disallow: /contact_process.php
+Disallow: /process_newsletter.php
+Disallow: /process_cxo.php
+Disallow: /refresh_captcha.php
+Disallow: /j.html
+
+# सिटमैप लोकेशन
+Sitemap: https://cxohire.com/sitemap.xml
