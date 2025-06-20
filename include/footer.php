@@ -25,7 +25,7 @@
     </div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919211460101?text=Hi" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/919211610707?text=Hi" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
