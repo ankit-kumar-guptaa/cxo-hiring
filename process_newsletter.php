@@ -94,13 +94,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host       = 'smtp.hostinger.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'rajiv@greencarcarpool.com';
+            $mail->Username   = 'no-reply@greencarcarpool.com';
             $mail->Password   = 'Rajiv@111@';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
             
             // Recipients
-            $mail->setFrom('rajiv@greencarcarpool.com', 'CXO Hiring');
+            $mail->setFrom('no-reply@greencarcarpool.com', 'CXO Hiring');
             $mail->addAddress($email); // Add subscriber
             $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Add admin email
             
@@ -143,12 +143,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $adminMail->isSMTP();
             $adminMail->Host       = 'smtp.hostinger.com';
             $adminMail->SMTPAuth   = true;
-            $adminMail->Username   = 'rajiv@greencarcarpool.com';
+            $adminMail->Username   = 'no-reply@greencarcarpool.com';
             $adminMail->Password   = 'Rajiv@111@';
             $adminMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $adminMail->Port       = 587;
             
-            $adminMail->setFrom('rajiv@greencarcarpool.com', 'CXO Hiring System');
+            $adminMail->setFrom('no-reply@greencarcarpool.com', 'CXO Hiring System');
             $adminMail->addAddress('rajiv@elitecorporatesolutions.com');
             
             $adminMail->isHTML(true);

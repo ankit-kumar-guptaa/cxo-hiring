@@ -99,13 +99,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.hostinger.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'rajiv@greencarcarpool.com';
+    $mail->Username   = 'no-reply@greencarcarpool.com';
     $mail->Password   = 'Rajiv@111@';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     
     // Recipients
-    $mail->setFrom('rajiv@greencarcarpool.com', 'CXO Recruitment');
+    $mail->setFrom('no-reply@greencarcarpool.com', 'CXO Recruitment');
     $mail->addAddress('rajiv@elitecorporatesolutions.com', 'Admin');
     
     // Content
@@ -129,12 +129,12 @@ try {
     $userMail->isSMTP();
     $userMail->Host       = 'smtp.hostinger.com';
     $userMail->SMTPAuth   = true;
-    $userMail->Username   = 'rajiv@greencarcarpool.com';
+    $userMail->Username   = 'no-reply@greencarcarpool.com';
     $userMail->Password   = 'Rajiv@111@';
     $userMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $userMail->Port       = 587;
     
-    $userMail->setFrom('rajiv@greencarcarpool.com', 'CXO Recruitment');
+    $userMail->setFrom('no-reply@greencarcarpool.com', 'CXO Recruitment');
     $userMail->addAddress($data['email'], $data['full_name']);
     
     $userMail->isHTML(true);
