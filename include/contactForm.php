@@ -18,7 +18,7 @@
                             <div class="contact-text">
                                 <h4>Corporate Headquarters</h4>
                                 <p>916, Astralis Tower, Supernova<br>Sector 94, Noida, India</p>
-                                <p><a href="tel:+919211610707">+91 92116 10707</a></p>
+                                <p><a href="tel:+919871916980">+91 98719 16980</a></p>
                                 <div class="map-link">
                                     <a href="https://maps.app.goo.gl/npsJKyqJ1aDGZeHe9" target="_blank">View on Map <i
                                             class="fas fa-external-link-alt"></i></a>
