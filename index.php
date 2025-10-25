@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CXO Hiring - Premier Executive Hiring Solutions</title>
+    <title>Elite Corporate Solutions - Premier Global Executive Hiring</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,38 +18,33 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Transform Your Leadership Team With World-Class CXO Talent</h1>
-            <p>We connect visionary companies with exceptional C-level executives to drive growth, innovation, and
-                lasting success.</p>
+            <h1>Transform Your Global Leadership With World-Class CXO Talent</h1>
+            <p>Elite Corporate Solutions connects visionary companies worldwide with exceptional C-level executives across UAE, India, USA, and beyond to drive growth, innovation, and lasting success.</p>
             <div class="hero-buttons">
-                <!-- <a href="#!" class="cta-button" id="openCxoModal">Hire a CXO <i class="fas fa-arrow-right"></i></a> -->
                 <a href="#!" class="cta-button open-cxo-modal">Hire a CXO <i class="fas fa-arrow-right"></i></a>
-                <!-- <button class="btn btn-primary open-cxo-modal">Hire a CXO</button> -->
                 <a href="#services" class="cta-button secondary">Our Services <i class="fas fa-search"></i></a>
             </div>
         </div>
     </section>
 
-
-
     <!-- Stats Section -->
     <section class="stats">
         <div class="stats-container">
             <div class="stat-item">
-                <div class="stat-number">200+</div>
-                <div class="stat-label">Successful Placements</div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Global Placements</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">95%</div>
+                <div class="stat-number">97%</div>
                 <div class="stat-label">Retention Rate</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">15+</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Industries Served</div>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Countries Served</div>
             </div>
         </div>
     </section>
@@ -57,18 +52,14 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="section-title">
-            <h2>About CXO Hiring</h2>
-            <p>We are a premier executive search firm specializing in C-suite and board-level placements across
-                industries.</p>
+            <h2>About Elite Corporate Solutions</h2>
+            <p>We are a premier global executive search firm specializing in C-suite and board-level placements across industries and continents.</p>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>Your Trusted Partner for Executive Talent Acquisition</h3>
-                <p>Founded in 2010, CXO Hiring has established itself as a leader in executive search, known for our
-                    rigorous methodology, extensive network, and deep understanding of leadership requirements across
-                    diverse sectors.</p>
-                <p>We go beyond traditional recruitment by focusing on cultural fit, leadership style, and strategic
-                    alignment to ensure long-term success for both our clients and candidates.</p>
+                <h3>Your Trusted Global Partner for Executive Talent Acquisition</h3>
+                <p>Elite Corporate Solutions has established itself as a leader in international executive search, known for our rigorous methodology, extensive global network, and deep understanding of leadership requirements across diverse sectors and geographies including UAE, India, USA, Europe, and Asia-Pacific.</p>
+                <p>We go beyond traditional recruitment by focusing on cultural fit, leadership style, and strategic alignment to ensure long-term success for both our clients and candidates across borders.</p>
                 <div class="about-features">
                     <div class="feature-item">
                         <div class="feature-icon">
@@ -76,8 +67,7 @@
                         </div>
                         <div class="feature-text">
                             <h4>Precision Matching</h4>
-                            <p>Our proprietary assessment tools ensure perfect alignment between candidate capabilities
-                                and organizational needs.</p>
+                            <p>Our proprietary assessment tools ensure perfect alignment between candidate capabilities and organizational needs globally.</p>
                         </div>
                     </div>
                     <div class="feature-item">
@@ -86,8 +76,7 @@
                         </div>
                         <div class="feature-text">
                             <h4>Global Reach</h4>
-                            <p>Access to an extensive network of C-level talent across North America, Europe, and
-                                Asia-Pacific.</p>
+                            <p>Access to an extensive network of C-level talent across UAE, India, USA, Europe, Middle East, and Asia-Pacific regions.</p>
                         </div>
                     </div>
                     <div class="feature-item">
@@ -96,7 +85,7 @@
                         </div>
                         <div class="feature-text">
                             <h4>Discretion Assured</h4>
-                            <p>Complete confidentiality for sensitive searches and leadership transitions.</p>
+                            <p>Complete confidentiality for sensitive searches and leadership transitions across all markets.</p>
                         </div>
                     </div>
                 </div>
@@ -111,8 +100,8 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-title">
-            <h2>Our Executive Search Services</h2>
-            <p>Comprehensive solutions tailored to your leadership hiring needs</p>
+            <h2>Our Global Executive Search Services</h2>
+            <p>Comprehensive solutions tailored to your international leadership hiring needs</p>
         </div>
         <div class="services-container">
             <div class="service-card">
@@ -121,9 +110,8 @@
                         alt="Executive Search">
                 </div>
                 <div class="service-content">
-                    <h3>Full-Scale Executive Search</h3>
-                    <p>End-to-end recruitment process for C-suite positions including CEO, CFO, CTO, and other senior
-                        leadership roles.</p>
+                    <h3>Full-Scale Global Executive Search</h3>
+                    <p>End-to-end recruitment process for C-suite positions including CEO, CFO, CTO, and other senior leadership roles across UAE, India, USA, and international markets.</p>
                     <a href="full-scale-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -134,8 +122,7 @@
                 </div>
                 <div class="service-content">
                     <h3>Confidential Executive Search</h3>
-                    <p>Discreet recruitment services for sensitive leadership changes, succession planning, and
-                        confidential replacements.</p>
+                    <p>Discreet international recruitment services for sensitive leadership changes, succession planning, and confidential replacements across global markets.</p>
                     <a href="confidential-executive-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -146,8 +133,7 @@
                 </div>
                 <div class="service-content">
                     <h3>Leadership Transition Services</h3>
-                    <p>Comprehensive support during executive onboarding, integration, and transition periods to ensure
-                        success.</p>
+                    <p>Comprehensive support during executive onboarding, integration, and transition periods to ensure success in new markets and cultures.</p>
                     <a href="leader-transition-service.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -158,8 +144,7 @@
                 </div>
                 <div class="service-content">
                     <h3>Board Advisory Services</h3>
-                    <p>Specialized recruitment for board directors, advisory board members, and governance
-                        professionals.</p>
+                    <p>Specialized recruitment for board directors, advisory board members, and governance professionals for international organizations.</p>
                     <a href="board-advisory.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -170,8 +155,7 @@
                 </div>
                 <div class="service-content">
                     <h3>Diversity Executive Search</h3>
-                    <p>Focused on identifying and placing diverse leadership talent to strengthen organizational
-                        performance.</p>
+                    <p>Focused on identifying and placing diverse leadership talent globally to strengthen organizational performance and cultural competence.</p>
                     <a href="diversity-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -182,7 +166,7 @@
                 </div>
                 <div class="service-content">
                     <h3>Virtual CXO Solutions</h3>
-                    <p>In an era of rapid change and increasing complexity, organizations need experienced leadership to stay competitive—but without the fixed cost of full-time executives.</p>
+                    <p>In an era of rapid change, organizations need experienced global leadership to stay competitive—without the fixed cost of full-time executives.</p>
                     <a href="virtual-cxo-services.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -192,34 +176,34 @@
     <!-- Process Section -->
     <section class="process" id="process">
         <div class="section-title">
-            <h2>Our Proven Executive Search Process</h2>
-            <p>A rigorous methodology that delivers exceptional results</p>
+            <h2>Our Proven Global Executive Search Process</h2>
+            <p>A rigorous methodology that delivers exceptional results worldwide</p>
         </div>
         <div class="process-steps">
             <div class="step">
                 <div class="step-number">1</div>
                 <h4>Needs Assessment</h4>
-                <p>Deep dive into your organizational needs, culture, and strategic objectives.</p>
+                <p>Deep dive into your organizational needs, culture, strategic objectives, and global market requirements.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h4>Market Mapping</h4>
-                <p>Comprehensive identification and evaluation of potential candidates.</p>
+                <h4>Global Market Mapping</h4>
+                <p>Comprehensive identification and evaluation of potential candidates across UAE, India, USA, and international markets.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <h4>Candidate Engagement</h4>
-                <p>Discreet outreach and in-depth assessment of qualified executives.</p>
+                <p>Discreet outreach and in-depth assessment of qualified executives across multiple geographies and industries.</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
                 <h4>Presentation & Selection</h4>
-                <p>Carefully vetted shortlist of candidates for your consideration.</p>
+                <p>Carefully vetted shortlist of top-tier international candidates for your consideration.</p>
             </div>
             <div class="step">
                 <div class="step-number">5</div>
                 <h4>Onboarding Support</h4>
-                <p>Ensuring smooth transition and successful integration.</p>
+                <p>Ensuring smooth transition and successful integration across borders and cultures.</p>
             </div>
         </div>
     </section>
@@ -227,8 +211,8 @@
     <!-- Industries Section -->
     <section class="industries" id="industries">
         <div class="section-title">
-            <h2>Industries We Serve</h2>
-            <p>Specialized expertise across key sectors</p>
+            <h2>Global Industries We Serve</h2>
+            <p>Specialized expertise across key sectors worldwide</p>
         </div>
         <div class="industries-grid">
             <div class="industry-card">
@@ -290,66 +274,11 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <!-- <section class="testimonials">
-    <div class="testimonials-container">
-        <div class="section-title">
-            <h2>Trusted by Leading Organizations</h2>
-            <p>What our clients say about our executive search services</p>
-        </div>
-        <div class="testimonial-slider">
-            <div class="testimonial-item">
-                <div class="testimonial-content">
-                    CXO Hiring delivered exceptional candidates for our CEO search. Their understanding of our culture and strategic needs was impressive. The candidate they recommended has transformed our company's trajectory.
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-image">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Chen">
-                    </div>
-                    <div class="author-info">
-                        <h5>David Chen</h5>
-                        <p>Chairman, TechGlobal Inc.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-content">
-                    We engaged CXO Hiring for a confidential CFO search. Their discretion, professionalism, and ability to identify outstanding talent exceeded our expectations. The process was seamless from start to finish.
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-image">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
-                    </div>
-                    <div class="author-info">
-                        <h5>Sarah Johnson</h5>
-                        <p>Board Member, Finova Capital</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-content">
-                    The quality of candidates presented by CXO Hiring was remarkable. They took the time to truly understand our needs and delivered executives who were not just qualified but perfectly aligned with our values.
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-image">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Rodriguez">
-                    </div>
-                    <div class="author-info">
-                        <h5>Michael Rodriguez</h5>
-                        <p>CEO, HealthVantage Systems</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
     <!-- Methodology Section -->
     <section class="methodology" id="methodology">
         <div class="section-title">
-            <h2 data-aos="fade-up">Our CXO Selection Methodology</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Proven framework for identifying transformational leadership
-                talent</p>
+            <h2 data-aos="fade-up">Our Global CXO Selection Methodology</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Proven framework for identifying transformational leadership talent worldwide</p>
         </div>
         <div class="methodology-container">
             <div class="methodology-card" data-aos="fade-right" data-aos-delay="200">
@@ -358,8 +287,7 @@
                 </div>
                 <div class="methodology-content">
                     <h3>Strategic Leadership Assessment</h3>
-                    <p>We evaluate 12 core executive competencies through rigorous interviews, case studies, and
-                        psychometric evaluations.</p>
+                    <p>We evaluate 12 core executive competencies through rigorous interviews, case studies, and psychometric evaluations tailored for global leadership.</p>
                     <div class="methodology-badge">Phase 1</div>
                 </div>
             </div>
@@ -369,8 +297,7 @@
                 </div>
                 <div class="methodology-content">
                     <h3>Organizational Fit Analysis</h3>
-                    <p>Deep dive into your company's stage, culture, and strategic objectives to ensure perfect
-                        alignment.</p>
+                    <p>Deep dive into your company's stage, culture, strategic objectives, and global market positioning to ensure perfect alignment.</p>
                     <div class="methodology-badge">Phase 2</div>
                 </div>
             </div>
@@ -380,8 +307,7 @@
                 </div>
                 <div class="methodology-content">
                     <h3>Structured Onboarding</h3>
-                    <p>90-day integration program with milestones, mentorship, and performance tracking for new
-                        executives.</p>
+                    <p>90-day integration program with milestones, mentorship, and performance tracking for new executives across markets.</p>
                     <div class="methodology-badge">Phase 3</div>
                 </div>
             </div>
@@ -391,8 +317,7 @@
                 </div>
                 <div class="methodology-content">
                     <h3>Continuous Performance Review</h3>
-                    <p>Quarterly check-ins for the first year to ensure leadership success and organizational impact.
-                    </p>
+                    <p>Quarterly check-ins for the first year to ensure leadership success and organizational impact globally.</p>
                     <div class="methodology-badge">Phase 4</div>
                 </div>
             </div>
@@ -511,8 +436,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Transform Your Leadership Team?</h2>
-            <p>Partner with CXO Hiring to find the exceptional executive talent your organization needs to thrive.</p>
+            <h2>Ready to Transform Your Global Leadership Team?</h2>
+            <p>Partner with Elite Corporate Solutions to find the exceptional executive talent your organization needs to thrive in UAE, India, USA, and beyond.</p>
             <div class="hero-buttons">
                 <a href="#he" class="cta-button">Get Started <i class="fas fa-arrow-right"></i></a>
                 <a href="tel:+919211610707" class="cta-button secondary"><i class="fas fa-phone"></i> Call Us Now</a>
@@ -522,7 +447,7 @@
 
     <section class="client-carousel-section">
         <div class="container">
-            <h2 class="section-title">Our Esteemed Clients</h2>
+            <h2 class="section-title">Our Esteemed Global Clients</h2>
             <div class="client-carousel">
                 <div class="client-track">
                     <!-- First Set -->
@@ -665,9 +590,8 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="section-title">
-            <h2 id="he" data-aos="fade-up">Connect With Our Executive Team</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation about your leadership needs
-            </p>
+            <h2 id="he" data-aos="fade-up">Connect With Our Global Executive Team</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation about your international leadership needs</p>
         </div>
         <div class="contact-container">
         <div class="contact-info">
@@ -706,9 +630,9 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:info@cxohire.com">info@cxohire.com</a></p>
+                                <p><a href="mailto:info@elitecorporatesolutions.com">info@elitecorporatesolutions.com</a></p>
                                 <div class="email-link">
-                                    <a href="mailto:info@cxohire.com">Send Email <i
+                                    <a href="mailto:info@elitecorporatesolutions.com">Send Email <i
                                             class="fas fa-paper-plane"></i></a>
                                 </div>
                             </div>
@@ -1002,7 +926,7 @@
             <i class="fas fa-user-tie text-white"></i>
           </div>
           <h4 class="modal-title mt-2">Find Your Perfect <span class="text-warning">CXO Match</span></h4>
-          <p class="small mb-0">we’ll connect with you in <strong>24 hours</strong> and fix online meeting with Senior leadership for better understanding of requirement </p>
+          <p class="small mb-0">we'll connect with you in <strong>24 hours</strong> and fix online meeting with Senior leadership for better understanding of requirement </p>
         </div>
       </div>
       
@@ -1420,3 +1344,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
     <?php include "include/footer.php" ?>
+
+</body>
+</html>
