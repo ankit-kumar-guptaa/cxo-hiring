@@ -8,7 +8,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="logo.jpg" alt="Elite Corporate Solutions" height="80">
+                <img src="https://www.elitecorporatesolutions.com/images/logo/logo.png" alt="Elite Corporate Solutions" height="60">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">

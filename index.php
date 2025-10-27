@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Corporate Solutions - Premier Global Executive Hiring</title>
+    <title>Elite Corporate Solutions - Premier Global Recruitment Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Transform Your Global Leadership With World-Class CXO Talent</h1>
-            <p>Elite Corporate Solutions connects visionary companies worldwide with exceptional C-level executives across UAE, India, USA, and beyond to drive growth, innovation, and lasting success.</p>
+            <h1>Transform Your Business With World-Class Talent Across All Industries</h1>
+            <p>Elite Corporate Solutions connects organizations worldwide with exceptional talent in Healthcare, IT, Construction, Petroleum, Engineering, and all major industries across UAE, India, USA, and beyond to drive growth and innovation.</p>
             <div class="hero-buttons">
-                <a href="#!" class="cta-button open-cxo-modal">Hire a CXO <i class="fas fa-arrow-right"></i></a>
+                <a href="#!" class="cta-button open-recruit-modal">Hire Talent <i class="fas fa-arrow-right"></i></a>
                 <a href="#services" class="cta-button secondary">Our Services <i class="fas fa-search"></i></a>
             </div>
         </div>
@@ -31,7 +31,7 @@
     <section class="stats">
         <div class="stats-container">
             <div class="stat-item">
-                <div class="stat-number">500+</div>
+                <div class="stat-number">5000+</div>
                 <div class="stat-label">Global Placements</div>
             </div>
             <div class="stat-item">
@@ -53,13 +53,13 @@
     <section class="about" id="about">
         <div class="section-title">
             <h2>About Elite Corporate Solutions</h2>
-            <p>We are a premier global executive search firm specializing in C-suite and board-level placements across industries and continents.</p>
+            <p>We are a premier global recruitment firm specializing in talent acquisition across Healthcare, IT, Construction, Petroleum, and all major industries worldwide.</p>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>Your Trusted Global Partner for Executive Talent Acquisition</h3>
-                <p>Elite Corporate Solutions has established itself as a leader in international executive search, known for our rigorous methodology, extensive global network, and deep understanding of leadership requirements across diverse sectors and geographies including UAE, India, USA, Europe, and Asia-Pacific.</p>
-                <p>We go beyond traditional recruitment by focusing on cultural fit, leadership style, and strategic alignment to ensure long-term success for both our clients and candidates across borders.</p>
+                <h3>Your Trusted Global Partner for Talent Acquisition</h3>
+                <p>Elite Corporate Solutions has established itself as a leader in international recruitment, known for our rigorous methodology, extensive global network, and deep understanding of talent requirements across diverse sectors including Healthcare, IT, Construction, Petroleum, Engineering, and more across UAE, India, USA, Europe, and Asia-Pacific.</p>
+                <p>We go beyond traditional recruitment by focusing on cultural fit, skill alignment, and strategic matching to ensure long-term success for both our clients and candidates across borders.</p>
                 <div class="about-features">
                     <div class="feature-item">
                         <div class="feature-icon">
@@ -67,7 +67,7 @@
                         </div>
                         <div class="feature-text">
                             <h4>Precision Matching</h4>
-                            <p>Our proprietary assessment tools ensure perfect alignment between candidate capabilities and organizational needs globally.</p>
+                            <p>Our proprietary assessment tools ensure perfect alignment between candidate capabilities and organizational needs globally across all industries.</p>
                         </div>
                     </div>
                     <div class="feature-item">
@@ -76,7 +76,7 @@
                         </div>
                         <div class="feature-text">
                             <h4>Global Reach</h4>
-                            <p>Access to an extensive network of C-level talent across UAE, India, USA, Europe, Middle East, and Asia-Pacific regions.</p>
+                            <p>Access to an extensive network of talent across UAE, India, USA, Europe, Middle East, and Asia-Pacific regions in all major sectors.</p>
                         </div>
                     </div>
                     <div class="feature-item">
@@ -85,13 +85,13 @@
                         </div>
                         <div class="feature-text">
                             <h4>Discretion Assured</h4>
-                            <p>Complete confidentiality for sensitive searches and leadership transitions across all markets.</p>
+                            <p>Complete confidentiality for sensitive searches and talent transitions across all markets and industries.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDgnA2p6Mf3JnXxYkIU6z839avbKVrzGmUA&s"
                     alt="Executive team meeting">
             </div>
         </div>
@@ -100,8 +100,8 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-title">
-            <h2>Our Global Executive Search Services</h2>
-            <p>Comprehensive solutions tailored to your international leadership hiring needs</p>
+            <h2>Our Global Recruitment Services</h2>
+            <p>Comprehensive solutions tailored to your international hiring needs across all industries</p>
         </div>
         <div class="services-container">
             <div class="service-card">
@@ -110,63 +110,63 @@
                         alt="Executive Search">
                 </div>
                 <div class="service-content">
-                    <h3>Full-Scale Global Executive Search</h3>
-                    <p>End-to-end recruitment process for C-suite positions including CEO, CFO, CTO, and other senior leadership roles across UAE, India, USA, and international markets.</p>
+                    <h3>Executive & Leadership Hiring</h3>
+                    <p>End-to-end recruitment for senior leadership positions across Healthcare, IT, Construction, Petroleum, and all industries in UAE, India, USA, and international markets.</p>
                     <a href="full-scale-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                        alt="Confidential Recruitment">
+                        alt="IT Recruitment">
                 </div>
                 <div class="service-content">
-                    <h3>Confidential Executive Search</h3>
-                    <p>Discreet international recruitment services for sensitive leadership changes, succession planning, and confidential replacements across global markets.</p>
+                    <h3>IT & Technology Recruitment</h3>
+                    <p>Specialized recruitment services for Software Engineers, Data Scientists, Cloud Architects, Cybersecurity Experts, and all IT roles across global markets.</p>
                     <a href="confidential-executive-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                        alt="Leadership Transition">
+                        alt="Healthcare Recruitment">
                 </div>
                 <div class="service-content">
-                    <h3>Leadership Transition Services</h3>
-                    <p>Comprehensive support during executive onboarding, integration, and transition periods to ensure success in new markets and cultures.</p>
+                    <h3>Healthcare Recruitment</h3>
+                    <p>Comprehensive hiring solutions for Doctors, Nurses, Medical Specialists, Healthcare Administrators, and all medical professionals internationally.</p>
                     <a href="leader-transition-service.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                        alt="Board Services">
+                        alt="Construction Recruitment">
                 </div>
                 <div class="service-content">
-                    <h3>Board Advisory Services</h3>
-                    <p>Specialized recruitment for board directors, advisory board members, and governance professionals for international organizations.</p>
+                    <h3>Construction & Engineering</h3>
+                    <p>Specialized recruitment for Civil Engineers, Project Managers, Site Supervisors, Architects, and all construction professionals for global projects.</p>
                     <a href="board-advisory.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                        alt="Diversity Hiring">
+                        alt="Petroleum Recruitment">
                 </div>
                 <div class="service-content">
-                    <h3>Diversity Executive Search</h3>
-                    <p>Focused on identifying and placing diverse leadership talent globally to strengthen organizational performance and cultural competence.</p>
+                    <h3>Petroleum & Energy Sector</h3>
+                    <p>Expert recruitment for Petroleum Engineers, Drilling Specialists, Refinery Managers, Energy Consultants, and oil & gas professionals globally.</p>
                     <a href="diversity-search.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt="Interim Executive">
+                        alt="Manufacturing Recruitment">
                 </div>
                 <div class="service-content">
-                    <h3>Virtual CXO Solutions</h3>
-                    <p>In an era of rapid change, organizations need experienced global leadership to stay competitive—without the fixed cost of full-time executives.</p>
+                    <h3>Manufacturing & Operations</h3>
+                    <p>Complete recruitment solutions for Production Managers, Quality Controllers, Operations Managers, and all manufacturing roles across industries.</p>
                     <a href="virtual-cxo-services.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -176,34 +176,34 @@
     <!-- Process Section -->
     <section class="process" id="process">
         <div class="section-title">
-            <h2>Our Proven Global Executive Search Process</h2>
-            <p>A rigorous methodology that delivers exceptional results worldwide</p>
+            <h2>Our Proven Global Recruitment Process</h2>
+            <p>A rigorous methodology that delivers exceptional results worldwide across all industries</p>
         </div>
         <div class="process-steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h4>Needs Assessment</h4>
-                <p>Deep dive into your organizational needs, culture, strategic objectives, and global market requirements.</p>
+                <h4>Requirement Analysis</h4>
+                <p>Deep understanding of your industry-specific needs, company culture, and strategic objectives across global markets.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h4>Global Market Mapping</h4>
-                <p>Comprehensive identification and evaluation of potential candidates across UAE, India, USA, and international markets.</p>
+                <h4>Global Talent Mapping</h4>
+                <p>Comprehensive identification of qualified candidates in Healthcare, IT, Construction, Petroleum, and other sectors across UAE, India, USA, and international markets.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h4>Candidate Engagement</h4>
-                <p>Discreet outreach and in-depth assessment of qualified executives across multiple geographies and industries.</p>
+                <h4>Candidate Screening</h4>
+                <p>Rigorous assessment and verification of technical skills, experience, and qualifications across multiple industries and geographies.</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
-                <h4>Presentation & Selection</h4>
-                <p>Carefully vetted shortlist of top-tier international candidates for your consideration.</p>
+                <h4>Interview & Selection</h4>
+                <p>Carefully vetted shortlist of top-tier candidates matched to your specific industry requirements for consideration.</p>
             </div>
             <div class="step">
                 <div class="step-number">5</div>
-                <h4>Onboarding Support</h4>
-                <p>Ensuring smooth transition and successful integration across borders and cultures.</p>
+                <h4>Placement Support</h4>
+                <p>Ensuring smooth transition and successful integration of talent across borders, cultures, and industries.</p>
             </div>
         </div>
     </section>
@@ -211,65 +211,65 @@
     <!-- Industries Section -->
     <section class="industries" id="industries">
         <div class="section-title">
-            <h2>Global Industries We Serve</h2>
+            <h2>Industries We Serve Globally</h2>
             <p>Specialized expertise across key sectors worldwide</p>
         </div>
         <div class="industries-grid">
             <div class="industry-card">
                 <div class="industry-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h4>Healthcare</h4>
+                <p>Doctors, Nurses, Medical Specialists, Healthcare Administrators</p>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
                     <i class="fas fa-laptop-code"></i>
                 </div>
-                <h4>Technology</h4>
-                <p>Software, Hardware, AI, Cloud, Cybersecurity</p>
+                <h4>Information Technology</h4>
+                <p>Software Engineers, Data Scientists, Cloud Architects, Cybersecurity</p>
             </div>
             <div class="industry-card">
                 <div class="industry-icon">
-                    <i class="fas fa-dollar-sign"></i>
+                    <i class="fas fa-hard-hat"></i>
                 </div>
-                <h4>Financial Services</h4>
-                <p>Banking, Insurance, FinTech, Asset Management</p>
+                <h4>Construction</h4>
+                <p>Civil Engineers, Project Managers, Site Supervisors, Architects</p>
             </div>
             <div class="industry-card">
                 <div class="industry-icon">
-                    <i class="fas fa-flask"></i>
+                    <i class="fas fa-oil-can"></i>
                 </div>
-                <h4>Life Sciences</h4>
-                <p>Pharma, Biotech, Medical Devices, Healthcare</p>
+                <h4>Petroleum & Energy</h4>
+                <p>Petroleum Engineers, Drilling Specialists, Refinery Managers</p>
             </div>
             <div class="industry-card">
                 <div class="industry-icon">
                     <i class="fas fa-industry"></i>
                 </div>
-                <h4>Industrial</h4>
-                <p>Manufacturing, Engineering, Construction</p>
+                <h4>Manufacturing</h4>
+                <p>Production Managers, Quality Controllers, Operations Managers</p>
             </div>
             <div class="industry-card">
                 <div class="industry-icon">
-                    <i class="fas fa-shopping-bag"></i>
+                    <i class="fas fa-dollar-sign"></i>
                 </div>
-                <h4>Consumer & Retail</h4>
-                <p>E-commerce, FMCG, Luxury, Hospitality</p>
+                <h4>Banking & Finance</h4>
+                <p>Financial Analysts, Accountants, Investment Managers, Auditors</p>
             </div>
             <div class="industry-card">
                 <div class="industry-icon">
-                    <i class="fas fa-bolt"></i>
+                    <i class="fas fa-hotel"></i>
                 </div>
-                <h4>Energy & Utilities</h4>
-                <p>Renewables, Oil & Gas, Power, Infrastructure</p>
+                <h4>Hospitality & Tourism</h4>
+                <p>Hotel Managers, Chefs, Front Desk, Hospitality Professionals</p>
             </div>
             <div class="industry-card">
                 <div class="industry-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-shopping-cart"></i>
                 </div>
-                <h4>Professional Services</h4>
-                <p>Consulting, Legal, Accounting, Advisory</p>
-            </div>
-            <div class="industry-card">
-                <div class="industry-icon">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <h4>Healthcare Services</h4>
-                <p>Hospitals, Providers, Payers, Digital Health</p>
+                <h4>Retail & E-commerce</h4>
+                <p>Store Managers, Sales Associates, Supply Chain, Logistics</p>
             </div>
         </div>
     </section>
@@ -277,47 +277,47 @@
     <!-- Methodology Section -->
     <section class="methodology" id="methodology">
         <div class="section-title">
-            <h2 data-aos="fade-up">Our Global CXO Selection Methodology</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Proven framework for identifying transformational leadership talent worldwide</p>
+            <h2 data-aos="fade-up">Our Global Talent Selection Methodology</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Proven framework for identifying exceptional talent across all industries worldwide</p>
         </div>
         <div class="methodology-container">
             <div class="methodology-card" data-aos="fade-right" data-aos-delay="200">
                 <div class="methodology-icon">
-                    <i class="fas fa-chess-king"></i>
+                    <i class="fas fa-user-check"></i>
                 </div>
                 <div class="methodology-content">
-                    <h3>Strategic Leadership Assessment</h3>
-                    <p>We evaluate 12 core executive competencies through rigorous interviews, case studies, and psychometric evaluations tailored for global leadership.</p>
+                    <h3>Comprehensive Skill Assessment</h3>
+                    <p>We evaluate technical skills, industry experience, and competencies through rigorous interviews, practical tests, and background verification tailored for each sector.</p>
                     <div class="methodology-badge">Phase 1</div>
                 </div>
             </div>
             <div class="methodology-card" data-aos="fade-right" data-aos-delay="300">
                 <div class="methodology-icon">
-                    <i class="fas fa-sitemap"></i>
+                    <i class="fas fa-briefcase"></i>
                 </div>
                 <div class="methodology-content">
-                    <h3>Organizational Fit Analysis</h3>
-                    <p>Deep dive into your company's stage, culture, strategic objectives, and global market positioning to ensure perfect alignment.</p>
+                    <h3>Industry-Specific Matching</h3>
+                    <p>Deep understanding of Healthcare, IT, Construction, Petroleum, and other sectors to ensure perfect alignment with your industry requirements.</p>
                     <div class="methodology-badge">Phase 2</div>
                 </div>
             </div>
             <div class="methodology-card" data-aos="fade-right" data-aos-delay="400">
                 <div class="methodology-icon">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-passport"></i>
                 </div>
                 <div class="methodology-content">
-                    <h3>Structured Onboarding</h3>
-                    <p>90-day integration program with milestones, mentorship, and performance tracking for new executives across markets.</p>
+                    <h3>Global Mobility Support</h3>
+                    <p>Complete assistance with visa processing, relocation, and compliance for international placements across UAE, India, USA, and beyond.</p>
                     <div class="methodology-badge">Phase 3</div>
                 </div>
             </div>
             <div class="methodology-card" data-aos="fade-right" data-aos-delay="500">
                 <div class="methodology-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-hands-helping"></i>
                 </div>
                 <div class="methodology-content">
-                    <h3>Continuous Performance Review</h3>
-                    <p>Quarterly check-ins for the first year to ensure leadership success and organizational impact globally.</p>
+                    <h3>Post-Placement Support</h3>
+                    <p>Continuous follow-up and support to ensure successful integration and performance of placed candidates across all industries.</p>
                     <div class="methodology-badge">Phase 4</div>
                 </div>
             </div>
@@ -436,8 +436,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Transform Your Global Leadership Team?</h2>
-            <p>Partner with Elite Corporate Solutions to find the exceptional executive talent your organization needs to thrive in UAE, India, USA, and beyond.</p>
+            <h2>Ready to Build Your Dream Team Across Any Industry?</h2>
+            <p>Partner with Elite Corporate Solutions to find exceptional talent in Healthcare, IT, Construction, Petroleum, and all major sectors across UAE, India, USA, and beyond.</p>
             <div class="hero-buttons">
                 <a href="#he" class="cta-button">Get Started <i class="fas fa-arrow-right"></i></a>
                 <a href="tel:+919211610707" class="cta-button secondary"><i class="fas fa-phone"></i> Call Us Now</a>
@@ -590,8 +590,8 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="section-title">
-            <h2 id="he" data-aos="fade-up">Connect With Our Global Executive Team</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation about your international leadership needs</p>
+            <h2 id="he" data-aos="fade-up">Connect With Our Global Recruitment Team</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Schedule a consultation about your hiring needs across Healthcare, IT, Construction, Petroleum, and more</p>
         </div>
         <div class="contact-container">
         <div class="contact-info">
@@ -669,19 +669,21 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="position">Looking to hire </label>
+                        <label for="position">Industry / Sector</label>
                         <select id="position" class="form-control">
-                            <option value="">Select position type</option>
-                            <option value="ceo">CEO/MD</option>
-                            <option value="cfo">CFO</option>
-                            <option value="cto">CTO</option>
-                            <option value="cmo">CMO</option>
-                            <option value="other">Other C-Suite</option>
-                            <option value="board">Board Member</option>
+                            <option value="">Select industry</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="it">Information Technology</option>
+                            <option value="construction">Construction</option>
+                            <option value="petroleum">Petroleum & Energy</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="finance">Banking & Finance</option>
+                            <option value="hospitality">Hospitality & Tourism</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">How Can We Assist You?*</label>
+                        <label for="message">Your Hiring Requirements*</label>
                         <textarea id="message" class="form-control" required></textarea>
                     </div>
                     <div class="form-footer">
@@ -923,10 +925,10 @@
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
         <div class="text-center w-100">
           <div class="bg-white bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-            <i class="fas fa-user-tie text-white"></i>
+            <i class="fas fa-users text-white"></i>
           </div>
-          <h4 class="modal-title mt-2">Find Your Perfect <span class="text-warning">CXO Match</span></h4>
-          <p class="small mb-0">we'll connect with you in <strong>24 hours</strong> and fix online meeting with Senior leadership for better understanding of requirement </p>
+          <h4 class="modal-title mt-2">Find Your Perfect <span class="text-warning">Talent Match</span></h4>
+          <p class="small mb-0">we'll connect with you in <strong>24 hours</strong> to discuss your recruitment needs across all industries</p>
         </div>
       </div>
       
@@ -944,7 +946,7 @@
         </div>
       </div>
 
-      <form id="cxoRecruitForm" action="process_cxo.php" method="POST" onsubmit="event.preventDefault(); executeRecaptcha('cxo_recruit', 'cxoRecruitForm').then(() => this.submit());">
+      <form id="cxoRecruitForm" action="process_recruitment.php" method="POST" onsubmit="event.preventDefault(); executeRecaptcha('recruitment', 'cxoRecruitForm').then(() => this.submit());">
         <!-- Step 1 -->
         <div class="modal-body form-step active" data-step="1">
           <div class="row g-3">
@@ -966,42 +968,42 @@
         <!-- Step 2 -->
         <div class="modal-body form-step" data-step="2">
           <div class="mb-4">
-            <label class="form-label fw-bold">Which position are you looking to fill?*</label>
+            <label class="form-label fw-bold">Which industry are you hiring for?*</label>
             <div class="row g-3">
               <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_ceo" value="CEO" checked>
-                <label class="btn btn-outline-primary position-btn w-100" for="position_ceo">
-                  <i class="fas fa-crown"></i>
-                  <span>CEO</span>
+                <input type="radio" class="btn-check" name="position" id="position_healthcare" value="Healthcare" checked>
+                <label class="btn btn-outline-primary position-btn w-100" for="position_healthcare">
+                  <i class="fas fa-heartbeat"></i>
+                  <span>Healthcare</span>
                 </label>
               </div>
               <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_cto" value="CTO">
-                <label class="btn btn-outline-primary position-btn w-100" for="position_cto">
+                <input type="radio" class="btn-check" name="position" id="position_it" value="IT">
+                <label class="btn btn-outline-primary position-btn w-100" for="position_it">
                   <i class="fas fa-laptop-code"></i>
-                  <span>CTO</span>
+                  <span>IT</span>
                 </label>
               </div>
               <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_cfo" value="CFO">
-                <label class="btn btn-outline-primary position-btn w-100" for="position_cfo">
-                  <i class="fas fa-chart-line"></i>
-                  <span>CFO</span>
+                <input type="radio" class="btn-check" name="position" id="position_construction" value="Construction">
+                <label class="btn btn-outline-primary position-btn w-100" for="position_construction">
+                  <i class="fas fa-hard-hat"></i>
+                  <span>Construction</span>
                 </label>
               </div>
               <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_cmo" value="CMO">
-                <label class="btn btn-outline-primary position-btn w-100" for="position_cmo">
-                  <i class="fas fa-bullhorn"></i>
-                  <span>OTHER</span>
+                <input type="radio" class="btn-check" name="position" id="position_petroleum" value="Petroleum">
+                <label class="btn btn-outline-primary position-btn w-100" for="position_petroleum">
+                  <i class="fas fa-oil-can"></i>
+                  <span>Petroleum</span>
                 </label>
               </div>
             </div>
           </div>
 
           <div class="mb-3">
-            <label class="form-label fw-bold">What challenges are you facing?*</label>
-            <textarea name="challenges" class="form-control" rows="3" placeholder="Describe your challenges..." required></textarea>
+            <label class="form-label fw-bold">What are your hiring requirements?*</label>
+            <textarea name="challenges" class="form-control" rows="3" placeholder="Describe your requirements..." required></textarea>
           </div>
 
           <div class="mb-3">
@@ -1043,7 +1045,7 @@
         <i class="fas fa-check-circle"></i>
       </div>
       <h4>Request Received!</h4>
-      <p class="mb-4">Our executive search team will contact you within <strong>24 hours</strong>.</p>
+      <p class="mb-4">Our recruitment team will contact you within <strong>24 hours</strong>.</p>
       <button class="btn btn-primary w-100" data-bs-dismiss="modal">Done</button>
     </div>
   </div>
@@ -1197,8 +1199,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.querySelector('.next-step');
     const prevBtn = document.querySelector('.prev-step');
     
-    // Open modal when clicking on the open-cxo-modal buttons/links
-    document.querySelectorAll('.open-cxo-modal').forEach(btn => {
+    // Open modal when clicking on the open-recruit-modal buttons/links
+    document.querySelectorAll('.open-recruit-modal').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             resetFormState(); // Reset form before showing
@@ -1260,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Execute reCAPTCHA
-                await executeRecaptcha('cxo_recruit', 'cxoRecruitForm');
+                await executeRecaptcha('recruitment', 'cxoRecruitForm');
                 
                 const formData = new FormData(form);
                 const response = await fetch(form.action, {
