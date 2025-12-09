@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <?php include "include/assets.php"?>
+    <?php include "include/assets.php" ?>
 </head>
 
 <body>
 
-    <?php include "include/header.php"?>
+    <?php include "include/header.php" ?>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- <section class="hero" id="home">
         <div class="hero-content">
             <h1>Transform Your Business With World-Class Talent Across All Industries</h1>
             <p>Elite Corporate Solutions connects organizations worldwide with exceptional talent in Healthcare, IT, Construction, Petroleum, Engineering, and all major industries across UAE, India, USA, and beyond to drive growth and innovation.</p>
@@ -25,7 +25,658 @@
                 <a href="#services" class="cta-button secondary">Our Services <i class="fas fa-search"></i></a>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Hero Section -->
+<section class="ecs-recruitment-hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+                <div class="ecs-hero-main-content">
+                    <div class="ecs-company-badge">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Elite Corporate Solutions</span>
+                    </div>
+                    
+                    <h1 class="ecs-main-heading">Building Teams for Healthcare, IT, Construction & More</h1>
+                    
+                    <p class="ecs-hero-tagline">
+                        Your Global Recruitment Partner — over 5000 placements in India, UAE, Dubai, USA, Europe. Connecting top talent and driving innovation worldwide.
+                    </p>
+                    
+                    <div class="ecs-stats-wrapper">
+                        <div class="ecs-stat-box">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>15+</strong>
+                                <span>Countries</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ecs-stat-box">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>5000+</strong>
+                                <span>Placements</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ecs-stat-box">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Award</strong>
+                                <span>Winning</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ecs-cta-buttons">
+                        <a href="#!" class="ecs-primary-btn open-recruit-modal">
+                            Hire Talent <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" class="ecs-secondary-btn">
+                            Our Services <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+                <div class="ecs-image-section-wrapper">
+                    <div class="ecs-main-image-container">
+                        <img src="https://remove.photos/cache/images/users/774fb8c5-e0bb-4b39-a993-127ec0db1f1b/recommend-optimized.png" alt="Recruitment Hero" class="ecs-hero-main-image">
+                    </div>
+                    
+                    <!-- Success Rate Card -->
+                    <div class="ecs-float-card ecs-success-rate-card">
+                        <div class="ecs-card-top-header">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Success Rate</span>
+                        </div>
+                        <div class="ecs-circular-progress">
+                            <svg width="70" height="70">
+                                <circle cx="35" cy="35" r="30" class="ecs-progress-bg-circle"></circle>
+                                <circle cx="35" cy="35" r="30" class="ecs-progress-active-circle"></circle>
+                            </svg>
+                            <span class="ecs-progress-value">90%</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Active Recruitments Card - Improved -->
+                    <div class="ecs-float-card ecs-recruitment-active-card">
+                        <div class="ecs-active-card-header">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Active Recruitments</span>
+                        </div>
+                        <div class="ecs-recruitment-count-box">
+                            <h3>250+</h3>
+                            <p>Open Positions</p>
+                        </div>
+                        <div class="ecs-industry-tags-wrapper">
+                            <span>Healthcare</span>
+                            <span>IT</span>
+                            <span>Construction</span>
+                        </div>
+                        <div class="ecs-card-footer-info">
+                            <div class="ecs-urgency-badge">
+                                <i class="fas fa-bolt"></i>
+                                <span>Urgent Hiring</span>
+                            </div>
+                            <div class="ecs-location-mini">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Global</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Global Presence Card -->
+                    <div class="ecs-float-card ecs-global-location-card">
+                        <div class="ecs-location-icon-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="ecs-location-text-box">
+                            <p>Global Presence</p>
+                            <h4 id="ecsLocationChanger">India</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hero Section - Professional Layout */
+    .ecs-recruitment-hero-section {
+        background: linear-gradient(135deg, #4a5fc1 0%, #3b4cb8 50%, #2d3a8c 100%);
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ecs-recruitment-hero-section::before {
+        content: '';
+        position: absolute;
+        top: -20%;
+        right: -15%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+        border-radius: 50%;
+    }
+
+    .ecs-hero-main-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Company Badge */
+    .ecs-company-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 8px 18px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+    }
+
+    .ecs-company-badge i {
+        font-size: 16px;
+        color: #ffd700;
+    }
+
+    .ecs-company-badge span {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    /* Main Heading */
+    .ecs-main-heading {
+        font-size: 42px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    /* Hero Tagline */
+    .ecs-hero-tagline {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.7;
+        margin-bottom: 30px;
+        max-width: 550px;
+    }
+
+    /* Stats Wrapper */
+    .ecs-stats-wrapper {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .ecs-stat-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .ecs-stat-box i {
+        font-size: 24px;
+        color: #ffd700;
+    }
+
+    .ecs-stat-box div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ecs-stat-box strong {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1;
+    }
+
+    .ecs-stat-box span {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 3px;
+    }
+
+    /* CTA Buttons */
+    .ecs-cta-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .ecs-primary-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #ffffff;
+        color: #3b4cb8;
+        padding: 13px 30px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .ecs-primary-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        color: #3b4cb8;
+    }
+
+    .ecs-primary-btn i {
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .ecs-primary-btn:hover i {
+        transform: translateX(5px);
+    }
+
+    .ecs-secondary-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: #ffffff;
+        padding: 13px 30px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .ecs-secondary-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #ffffff;
+        transform: translateY(-3px);
+    }
+
+    /* Image Section */
+    .ecs-image-section-wrapper {
+        position: relative;
+        padding: 20px;
+    }
+
+    .ecs-main-image-container {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .ecs-hero-main-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Floating Cards */
+    .ecs-float-card {
+        position: absolute;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        padding: 16px;
+        animation: ecsFloatAnimation 3.5s ease-in-out infinite;
+    }
+
+    @keyframes ecsFloatAnimation {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+
+    /* Success Rate Card */
+    .ecs-success-rate-card {
+        top: 10%;
+        left: -6%;
+        padding: 16px 20px;
+        min-width: 170px;
+    }
+
+    .ecs-card-top-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #2b2d42;
+    }
+
+    .ecs-card-top-header i {
+        font-size: 16px;
+        color: #00d9a5;
+    }
+
+    .ecs-circular-progress {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .ecs-progress-bg-circle {
+        fill: none;
+        stroke: #e0e0e5;
+        stroke-width: 6;
+    }
+
+    .ecs-progress-active-circle {
+        fill: none;
+        stroke: #00d9a5;
+        stroke-width: 6;
+        stroke-dasharray: 188;
+        stroke-dashoffset: 19;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        animation: ecsProgressAnim 2s ease-out forwards;
+    }
+
+    @keyframes ecsProgressAnim {
+        from {
+            stroke-dashoffset: 188;
+        }
+        to {
+            stroke-dashoffset: 19;
+        }
+    }
+
+    .ecs-progress-value {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: 700;
+        color: #00d9a5;
+    }
+
+    /* Active Recruitments Card - Enhanced */
+    .ecs-recruitment-active-card {
+        top: 40%;
+        right: -8%;
+        min-width: 260px;
+        animation-delay: 0.5s;
+    }
+
+    .ecs-active-card-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #2b2d42;
+    }
+
+    .ecs-active-card-header i {
+        font-size: 14px;
+        color: #3b4cb8;
+    }
+
+    .ecs-recruitment-count-box {
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    .ecs-recruitment-count-box h3 {
+        font-size: 36px;
+        font-weight: 800;
+        color: #3b4cb8;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .ecs-recruitment-count-box p {
+        font-size: 12px;
+        color: #656565;
+        margin: 6px 0 0 0;
+    }
+
+    .ecs-industry-tags-wrapper {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 14px;
+    }
+
+    .ecs-industry-tags-wrapper span {
+        background: #f0f0f5;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #2b2d42;
+    }
+
+    /* Card Footer Info - New Addition */
+    .ecs-card-footer-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 12px;
+        border-top: 1px solid #e8e8f0;
+    }
+
+    .ecs-urgency-badge {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+        padding: 5px 10px;
+        border-radius: 12px;
+    }
+
+    .ecs-urgency-badge i {
+        font-size: 10px;
+        color: #ffffff;
+        animation: ecsFlashAnim 1.5s ease-in-out infinite;
+    }
+
+    @keyframes ecsFlashAnim {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    .ecs-urgency-badge span {
+        font-size: 10px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    .ecs-location-mini {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .ecs-location-mini i {
+        font-size: 11px;
+        color: #3b4cb8;
+    }
+
+    .ecs-location-mini span {
+        font-size: 11px;
+        font-weight: 600;
+        color: #656565;
+    }
+
+    /* Global Presence Card */
+    .ecs-global-location-card {
+        bottom: 15%;
+        left: 4%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 20px;
+        min-width: 210px;
+        animation-delay: 1s;
+    }
+
+    .ecs-location-icon-box {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #3b4cb8;
+        animation: ecsPulseAnim 2s ease-in-out infinite;
+    }
+
+    @keyframes ecsPulseAnim {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.08);
+        }
+    }
+
+    .ecs-location-text-box {
+        flex: 1;
+    }
+
+    .ecs-location-text-box p {
+        font-size: 11px;
+        color: #656565;
+        margin: 0 0 4px 0;
+        font-weight: 500;
+    }
+
+    .ecs-location-text-box h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #2b2d42;
+        margin: 0;
+        animation: ecsSlideInAnim 0.5s ease-out;
+    }
+
+    @keyframes ecsSlideInAnim {
+        from {
+            opacity: 0;
+            transform: translateX(-15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 991px) {
+        .ecs-recruitment-hero-section {
+            padding: 50px 0;
+        }
+
+        .ecs-main-heading {
+            font-size: 36px;
+        }
+
+        .ecs-float-card {
+            display: none;
+        }
+
+        .ecs-stats-wrapper {
+            justify-content: center;
+        }
+
+        .ecs-cta-buttons {
+            justify-content: center;
+        }
+
+        .ecs-hero-tagline {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ecs-company-badge {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .ecs-main-heading {
+            font-size: 28px;
+        }
+
+        .ecs-hero-tagline {
+            font-size: 14px;
+        }
+
+        .ecs-stat-box strong {
+            font-size: 18px;
+        }
+
+        .ecs-stat-box span {
+            font-size: 11px;
+        }
+
+        .ecs-primary-btn,
+        .ecs-secondary-btn {
+            padding: 12px 25px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+<script>
+    // Location Changer Animation
+    const ecsLocations = ['India', 'USA', 'UAE', 'Dubai', 'Europe'];
+    let ecsCurrentIndex = 0;
+    const ecsLocationEl = document.getElementById('ecsLocationChanger');
+
+    function ecsUpdateLocation() {
+        ecsLocationEl.style.opacity = '0';
+        ecsLocationEl.style.transform = 'translateX(-15px)';
+        
+        setTimeout(() => {
+            ecsCurrentIndex = (ecsCurrentIndex + 1) % ecsLocations.length;
+            ecsLocationEl.textContent = ecsLocations[ecsCurrentIndex];
+            
+            ecsLocationEl.style.animation = 'none';
+            setTimeout(() => {
+                ecsLocationEl.style.animation = 'ecsSlideInAnim 0.5s ease-out';
+                ecsLocationEl.style.opacity = '1';
+                ecsLocationEl.style.transform = 'translateX(0)';
+            }, 50);
+        }, 400);
+    }
+
+    setInterval(ecsUpdateLocation, 3000);
+</script>
+
+
 
     <!-- Stats Section -->
     <section class="stats">
@@ -594,7 +1245,7 @@
             <p data-aos="fade-up" data-aos-delay="100">Schedule a consultation about your hiring needs across Healthcare, IT, Construction, Petroleum, and more</p>
         </div>
         <div class="contact-container">
-        <div class="contact-info">
+            <div class="contact-info">
                 <div class="contact-card" data-aos="fade-right">
                     <h3>Our Office</h3>
                     <div class="contact-details">
@@ -641,7 +1292,7 @@
                     <div class="contact-hours">
                         <h4>Office Hours</h4>
                         <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                            </p>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -915,437 +1566,505 @@
             }
         }
     </style>
-   
+
 
     <!-- Popup Form HTML -->
     <div class="modal fade" id="cxoRecruitModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
-        <div class="text-center w-100">
-          <div class="bg-white bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-            <i class="fas fa-users text-white"></i>
-          </div>
-          <h4 class="modal-title mt-2">Find Your Perfect <span class="text-warning">Talent Match</span></h4>
-          <p class="small mb-0">we'll connect with you in <strong>24 hours</strong> to discuss your recruitment needs across all industries</p>
-        </div>
-      </div>
-      
-      <!-- Progress Tracker -->
-      <div class="px-4 pt-3">
-        <div class="progress-tracker">
-          <div class="progress-step active" data-step="1">
-            <div class="step-numberr">1</div>
-            <div class="step-label">BASIC INFO</div>
-          </div>
-          <div class="progress-step" data-step="2">
-            <div class="step-numberr">2</div>
-            <div class="step-label">REQUIREMENTS</div>
-          </div>
-        </div>
-      </div>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
+                    <div class="text-center w-100">
+                        <div class="bg-white bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                        <h4 class="modal-title mt-2">Find Your Perfect <span class="text-warning">Talent Match</span></h4>
+                        <p class="small mb-0">we'll connect with you in <strong>24 hours</strong> to discuss your recruitment needs across all industries</p>
+                    </div>
+                </div>
 
-      <form id="cxoRecruitForm" action="process_recruitment.php" method="POST" onsubmit="event.preventDefault(); executeRecaptcha('recruitment', 'cxoRecruitForm').then(() => this.submit());">
-        <!-- Step 1 -->
-        <div class="modal-body form-step active" data-step="1">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" name="full_name" class="form-control" placeholder="Full Name*" required>
-            </div>
-            <div class="col-md-6">
-              <input type="email" name="email" class="form-control" placeholder="Email*" required>
-            </div>
-            <div class="col-md-6">
-              <input type="tel" name="phone" class="form-control" placeholder="Phone*" required>
-            </div>
-            <div class="col-md-6">
-              <input type="text" name="company" class="form-control" placeholder="Company">
-            </div>
-          </div>
-        </div>
+                <!-- Progress Tracker -->
+                <div class="px-4 pt-3">
+                    <div class="progress-tracker">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-numberr">1</div>
+                            <div class="step-label">BASIC INFO</div>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-numberr">2</div>
+                            <div class="step-label">REQUIREMENTS</div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Step 2 -->
-        <div class="modal-body form-step" data-step="2">
-          <div class="mb-4">
-            <label class="form-label fw-bold">Which industry are you hiring for?*</label>
-            <div class="row g-3">
-              <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_healthcare" value="Healthcare" checked>
-                <label class="btn btn-outline-primary position-btn w-100" for="position_healthcare">
-                  <i class="fas fa-heartbeat"></i>
-                  <span>Healthcare</span>
-                </label>
-              </div>
-              <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_it" value="IT">
-                <label class="btn btn-outline-primary position-btn w-100" for="position_it">
-                  <i class="fas fa-laptop-code"></i>
-                  <span>IT</span>
-                </label>
-              </div>
-              <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_construction" value="Construction">
-                <label class="btn btn-outline-primary position-btn w-100" for="position_construction">
-                  <i class="fas fa-hard-hat"></i>
-                  <span>Construction</span>
-                </label>
-              </div>
-              <div class="col-6 col-md-3">
-                <input type="radio" class="btn-check" name="position" id="position_petroleum" value="Petroleum">
-                <label class="btn btn-outline-primary position-btn w-100" for="position_petroleum">
-                  <i class="fas fa-oil-can"></i>
-                  <span>Petroleum</span>
-                </label>
-              </div>
+                <form id="cxoRecruitForm" action="process_recruitment.php" method="POST" onsubmit="event.preventDefault(); executeRecaptcha('recruitment', 'cxoRecruitForm').then(() => this.submit());">
+                    <!-- Step 1 -->
+                    <div class="modal-body form-step active" data-step="1">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="full_name" class="form-control" placeholder="Full Name*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control" placeholder="Email*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="company" class="form-control" placeholder="Company">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="modal-body form-step" data-step="2">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Which industry are you hiring for?*</label>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-3">
+                                    <input type="radio" class="btn-check" name="position" id="position_healthcare" value="Healthcare" checked>
+                                    <label class="btn btn-outline-primary position-btn w-100" for="position_healthcare">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <span>Healthcare</span>
+                                    </label>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <input type="radio" class="btn-check" name="position" id="position_it" value="IT">
+                                    <label class="btn btn-outline-primary position-btn w-100" for="position_it">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>IT</span>
+                                    </label>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <input type="radio" class="btn-check" name="position" id="position_construction" value="Construction">
+                                    <label class="btn btn-outline-primary position-btn w-100" for="position_construction">
+                                        <i class="fas fa-hard-hat"></i>
+                                        <span>Construction</span>
+                                    </label>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <input type="radio" class="btn-check" name="position" id="position_petroleum" value="Petroleum">
+                                    <label class="btn btn-outline-primary position-btn w-100" for="position_petroleum">
+                                        <i class="fas fa-oil-can"></i>
+                                        <span>Petroleum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">What are your hiring requirements?*</label>
+                            <textarea name="challenges" class="form-control" rows="3" placeholder="Describe your requirements..." required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-cxo">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary prev-step">
+                            <i class="fas fa-chevron-left me-2"></i> Back
+                        </button>
+                        <button type="button" class="btn btn-primary next-step">
+                            Continue <i class="fas fa-chevron-right ms-2"></i>
+                        </button>
+                        <button type="submit" class="btn btn-success submit-form d-none" id="submitBtn">
+                            Submit <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Loader -->
+                <div class="loader-overlay d-none" id="loader">
+                    <div class="spinner">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2 text-white">Processing your request...</p>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label fw-bold">What are your hiring requirements?*</label>
-            <textarea name="challenges" class="form-control" rows="3" placeholder="Describe your requirements..." required></textarea>
-          </div>
-
-          <div class="mb-3">
-            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-cxo">
-          </div>
         </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary prev-step">
-            <i class="fas fa-chevron-left me-2"></i> Back
-          </button>
-          <button type="button" class="btn btn-primary next-step">
-            Continue <i class="fas fa-chevron-right ms-2"></i>
-          </button>
-          <button type="submit" class="btn btn-success submit-form d-none" id="submitBtn">
-            Submit <i class="fas fa-paper-plane ms-2"></i>
-          </button>
-        </div>
-      </form>
-      
-      <!-- Loader -->
-      <div class="loader-overlay d-none" id="loader">
-        <div class="spinner">
-          <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-          <p class="mt-2 text-white">Processing your request...</p>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<!-- Success Modal -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4">
-      <div class="text-success mb-3" style="font-size: 4rem;">
-        <i class="fas fa-check-circle"></i>
-      </div>
-      <h4>Request Received!</h4>
-      <p class="mb-4">Our recruitment team will contact you within <strong>24 hours</strong>.</p>
-      <button class="btn btn-primary w-100" data-bs-dismiss="modal">Done</button>
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="text-success mb-3" style="font-size: 4rem;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h4>Request Received!</h4>
+                <p class="mb-4">Our recruitment team will contact you within <strong>24 hours</strong>.</p>
+                <button class="btn btn-primary w-100" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<style>
-.progress-tracker {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-.progress-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-}
-.step-numberr {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #e9ecef;
-    color: #6c757d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.step-label {
-    font-size: 12px;
-    font-weight: 500;
-    color: #6c757d;
-    text-align: center;
-}
-.progress-step.active .step-numberr {
-    background: #0d6efd;
-    color: white;
-}
-.progress-step.active .step-label {
-    color: #0d6efd;
-    font-weight: 600;
-}
-.position-btn {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 5px;
-}
-.position-btn i {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-.form-step {
-    display: none;
-}
-.form-step.active {
-    display: block;
-    animation: fadeIn 0.3s ease-out;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.custom-captcha {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-#captchaCanvas {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-}
-#captchaInput {
-    max-width: 150px;
-}
-.captcha-error {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 10px;
-    width: 100%;
-    padding: 8px;
-    background: #f8d7da;
-    border: 1px solid #f5c2c7;
-    border-radius: 4px;
-}
-.captcha-error.shake {
-    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-@keyframes shake {
-    10%, 90% { transform: translateX(-1px); }
-    20%, 80% { transform: translateX(2px); }
-    30%, 50%, 70% { transform: translateX(-4px); }
-    40%, 60% { transform: translateX(4px); }
-}
-/* Loader Styles */
-.loader-overlay {
-    position: fixed;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-}
-.spinner {
-    text-align: center;
-}
-.spinner-border {
-    width: 3rem;
-    height: 3rem;
-}
-</style>
-
-<script>
-// reCAPTCHA execution function
-async function executeRecaptcha(action, formId) {
-    return new Promise((resolve, reject) => {
-        try {
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6LfVUUgrAAAAAKFj7HuGET-_vJ7ZcCztfDkdxPEy', {action: action})
-                    .then(function(token) {
-                        document.getElementById('g-recaptcha-response-cxo').value = token;
-                        resolve(token);
-                    })
-                    .catch(function(error) {
-                        console.error('reCAPTCHA error:', error);
-                        reject(error);
-                    });
-            });
-        } catch (error) {
-            console.error('reCAPTCHA execution error:', error);
-            reject(error);
+    <style>
+        .progress-tracker {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
         }
-    });
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Modal elements
-    const cxoModal = document.getElementById('cxoRecruitModal');
-    const successModal = document.getElementById('successModal');
-    const form = document.getElementById('cxoRecruitForm');
-    const loader = document.getElementById('loader');
-    const submitBtn = document.getElementById('submitBtn');
-    const nextBtn = document.querySelector('.next-step');
-    const prevBtn = document.querySelector('.prev-step');
-    
-    // Open modal when clicking on the open-recruit-modal buttons/links
-    document.querySelectorAll('.open-recruit-modal').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            resetFormState(); // Reset form before showing
-            const bsModal = new bootstrap.Modal(cxoModal);
-            bsModal.show();
-        });
-    });
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
 
-    // Form navigation
-    if (nextBtn) {
-        nextBtn.addEventListener('click', function() {
-            const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
-            const nextStep = currentStep?.nextElementSibling;
-            
-            if (validateStep(currentStep)) {
-                currentStep.classList.remove('active');
-                nextStep.classList.add('active');
-                updateProgress(2);
-                
-                // Show submit button, hide next button on last step
-                nextBtn.classList.add('d-none');
-                submitBtn.classList.remove('d-none');
-                prevBtn.classList.remove('d-none');
-            }
-        });
-    }
+        .step-numberr {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e9ecef;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-    if (prevBtn) {
-        prevBtn.addEventListener('click', function() {
-            const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
-            const prevStep = currentStep?.previousElementSibling;
-            
-            currentStep.classList.remove('active');
-            prevStep.classList.add('active');
-            updateProgress(1);
-            
-            // Show next button, hide submit button on first step
-            nextBtn.classList.remove('d-none');
-            submitBtn.classList.add('d-none');
-            if (prevStep.dataset.step === '1') {
-                prevBtn.classList.add('d-none');
-            }
-        });
-    }
+        .step-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #6c757d;
+            text-align: center;
+        }
 
-    // Form submission
-    if (form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            if (!validateStep(document.querySelector('.form-step.active'))) {
-                return;
+        .progress-step.active .step-numberr {
+            background: #0d6efd;
+            color: white;
+        }
+
+        .progress-step.active .step-label {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+
+        .position-btn {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 5px;
+        }
+
+        .position-btn i {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
             }
 
-            try {
-                // Remove loader functionality
-                if (submitBtn) {
-                    submitBtn.disabled = true;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .custom-captcha {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #captchaCanvas {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        #captchaInput {
+            max-width: 150px;
+        }
+
+        .captcha-error {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            background: #f8d7da;
+            border: 1px solid #f5c2c7;
+            border-radius: 4px;
+        }
+
+        .captcha-error.shake {
+            animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        }
+
+        @keyframes shake {
+
+            10%,
+            90% {
+                transform: translateX(-1px);
+            }
+
+            20%,
+            80% {
+                transform: translateX(2px);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translateX(-4px);
+            }
+
+            40%,
+            60% {
+                transform: translateX(4px);
+            }
+        }
+
+        /* Loader Styles */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .spinner {
+            text-align: center;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+
+    <script>
+        // reCAPTCHA execution function
+        async function executeRecaptcha(action, formId) {
+            return new Promise((resolve, reject) => {
+                try {
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute('6LfVUUgrAAAAAKFj7HuGET-_vJ7ZcCztfDkdxPEy', {
+                                action: action
+                            })
+                            .then(function(token) {
+                                document.getElementById('g-recaptcha-response-cxo').value = token;
+                                resolve(token);
+                            })
+                            .catch(function(error) {
+                                console.error('reCAPTCHA error:', error);
+                                reject(error);
+                            });
+                    });
+                } catch (error) {
+                    console.error('reCAPTCHA execution error:', error);
+                    reject(error);
                 }
-                
-                // Execute reCAPTCHA
-                await executeRecaptcha('recruitment', 'cxoRecruitForm');
-                
-                const formData = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Modal elements
+            const cxoModal = document.getElementById('cxoRecruitModal');
+            const successModal = document.getElementById('successModal');
+            const form = document.getElementById('cxoRecruitForm');
+            const loader = document.getElementById('loader');
+            const submitBtn = document.getElementById('submitBtn');
+            const nextBtn = document.querySelector('.next-step');
+            const prevBtn = document.querySelector('.prev-step');
+
+            // Open modal when clicking on the open-recruit-modal buttons/links
+            document.querySelectorAll('.open-recruit-modal').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    resetFormState(); // Reset form before showing
+                    const bsModal = new bootstrap.Modal(cxoModal);
+                    bsModal.show();
                 });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    // Hide form modal, show success modal
-                    if (cxoModal) {
-                        const bsModal = bootstrap.Modal.getInstance(cxoModal) || new bootstrap.Modal(cxoModal);
-                        bsModal.hide();
+            });
+
+            // Form navigation
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function() {
+                    const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
+                    const nextStep = currentStep?.nextElementSibling;
+
+                    if (validateStep(currentStep)) {
+                        currentStep.classList.remove('active');
+                        nextStep.classList.add('active');
+                        updateProgress(2);
+
+                        // Show submit button, hide next button on last step
+                        nextBtn.classList.add('d-none');
+                        submitBtn.classList.remove('d-none');
+                        prevBtn.classList.remove('d-none');
                     }
-                    
-                    if (successModal) {
-                        const successBsModal = new bootstrap.Modal(successModal);
-                        successBsModal.show();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function() {
+                    const currentStep = document.querySelector('#cxoRecruitModal .form-step.active');
+                    const prevStep = currentStep?.previousElementSibling;
+
+                    currentStep.classList.remove('active');
+                    prevStep.classList.add('active');
+                    updateProgress(1);
+
+                    // Show next button, hide submit button on first step
+                    nextBtn.classList.remove('d-none');
+                    submitBtn.classList.add('d-none');
+                    if (prevStep.dataset.step === '1') {
+                        prevBtn.classList.add('d-none');
                     }
-                    
-                    // Reset form
-                    form.reset();
-                    resetFormState();
-                } else {
-                    throw new Error(data.message || 'Submission failed');
-                }
-            } catch (error) {
-                console.error('Form submission error:', error);
-                alert('Form submission failed. Please try again.');
-            } finally {
-                // Reset button without loader
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = 'Submit <i class="fas fa-paper-plane ms-2"></i>';
-                }
+                });
+            }
+
+            // Form submission
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    if (!validateStep(document.querySelector('.form-step.active'))) {
+                        return;
+                    }
+
+                    try {
+                        // Remove loader functionality
+                        if (submitBtn) {
+                            submitBtn.disabled = true;
+                        }
+
+                        // Execute reCAPTCHA
+                        await executeRecaptcha('recruitment', 'cxoRecruitForm');
+
+                        const formData = new FormData(form);
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const data = await response.json();
+
+                        if (data.success) {
+                            // Hide form modal, show success modal
+                            if (cxoModal) {
+                                const bsModal = bootstrap.Modal.getInstance(cxoModal) || new bootstrap.Modal(cxoModal);
+                                bsModal.hide();
+                            }
+
+                            if (successModal) {
+                                const successBsModal = new bootstrap.Modal(successModal);
+                                successBsModal.show();
+                            }
+
+                            // Reset form
+                            form.reset();
+                            resetFormState();
+                        } else {
+                            throw new Error(data.message || 'Submission failed');
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        alert('Form submission failed. Please try again.');
+                    } finally {
+                        // Reset button without loader
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = 'Submit <i class="fas fa-paper-plane ms-2"></i>';
+                        }
+                    }
+                });
+            }
+
+            // Helper functions
+            function validateStep(step) {
+                if (!step) return false;
+                let isValid = true;
+                step.querySelectorAll('[required]').forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
+                });
+                return isValid;
+            }
+
+            function updateProgress(step) {
+                document.querySelectorAll('.progress-step').forEach(stepEl => {
+                    stepEl.classList.toggle('active', parseInt(stepEl.dataset.step) <= step);
+                });
+            }
+
+            function resetFormState() {
+                if (!form) return;
+
+                // Reset to first step
+                const steps = form.querySelectorAll('.form-step');
+                steps.forEach(step => step.classList.remove('active'));
+                if (steps[0]) steps[0].classList.add('active');
+
+                // Reset buttons
+                if (nextBtn) nextBtn.classList.remove('d-none');
+                if (submitBtn) submitBtn.classList.add('d-none');
+                if (prevBtn) prevBtn.classList.add('d-none');
+
+                // Reset progress
+                updateProgress(1);
+
+                // Clear validation states
+                form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
             }
         });
-    }
+    </script>
 
-    // Helper functions
-    function validateStep(step) {
-        if (!step) return false;
-        let isValid = true;
-        step.querySelectorAll('[required]').forEach(input => {
-            if (!input.value.trim()) {
-                input.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                input.classList.remove('is-invalid');
-            }
+
+    <script>
+        var mainSlider = new Swiper(".mySwiper2", {
+            parallax: true,
+            speed: 1200,
+            effect: 'slide',
+            direction: "vertical",
+            autoplay: true,
+            navigation: {
+                nextEl: '.upk-button-next',
+                prevEl: '.upk-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<span class="' + className + ' swiper-pagination-bullet--svg-animation"><svg width="28" height="28" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="10" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="2" stroke-width="3"></circle></svg></span>';
+                },
+            },
         });
-        return isValid;
-    }
-
-    function updateProgress(step) {
-        document.querySelectorAll('.progress-step').forEach(stepEl => {
-            stepEl.classList.toggle('active', parseInt(stepEl.dataset.step) <= step);
-        });
-    }
-
-    function resetFormState() {
-        if (!form) return;
-        
-        // Reset to first step
-        const steps = form.querySelectorAll('.form-step');
-        steps.forEach(step => step.classList.remove('active'));
-        if (steps[0]) steps[0].classList.add('active');
-        
-        // Reset buttons
-        if (nextBtn) nextBtn.classList.remove('d-none');
-        if (submitBtn) submitBtn.classList.add('d-none');
-        if (prevBtn) prevBtn.classList.add('d-none');
-        
-        // Reset progress
-        updateProgress(1);
-        
-        // Clear validation states
-        form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
-    }
-});
-</script>
+    </script>
     <?php include "include/footer.php" ?>
 
 </body>
+
 </html>
