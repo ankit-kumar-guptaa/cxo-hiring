@@ -84,7 +84,7 @@
             <div class="col-lg-6 col-md-12 order-1 order-lg-2">
                 <div class="ecs-image-section-wrapper">
                     <div class="ecs-main-image-container">
-                        <img src="https://remove.photos/cache/images/users/774fb8c5-e0bb-4b39-a993-127ec0db1f1b/recommend-optimized.png" alt="Recruitment Hero" class="ecs-hero-main-image">
+                        <img src="https://www.bobsearch.com/wp-content/uploads/2025/01/executive-process.jpg" alt="Recruitment Hero" class="ecs-hero-main-image">
                     </div>
                     
                     <!-- Success Rate Card -->

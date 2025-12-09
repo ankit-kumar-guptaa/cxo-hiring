@@ -75,7 +75,8 @@
     </style>
     <div class="footer-container">
         <div class="footer-about">
-            <div class="footer-logo">CXO Hire</div>
+            <!-- <div class="footer-logo">CXO Hire</div> -->
+             <img src="https://www.elitecorporatesolutions.com/images/logo/logo.png" alt="">
             <p>Premier executive search firm specializing in C-suite and board-level placements across industries worldwide.</p>
         </div>
         <div class="footer-links">
